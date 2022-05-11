@@ -3,6 +3,7 @@
 //Bölüm : BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ
 
 using System;
+using ProjeLibrary.Somut;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

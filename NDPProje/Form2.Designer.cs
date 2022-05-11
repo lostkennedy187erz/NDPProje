@@ -226,6 +226,7 @@ namespace NDPProje
             this.Name = "Form2";
             this.Text = "ZGarage";
             this.Load += new System.EventHandler(this.Form2_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             this.gösterge.ResumeLayout(false);
             this.gösterge.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
