@@ -19,13 +19,15 @@ namespace NDPProje
 {
     public partial class Form2 : Form
     {
-        private readonly Oyun _oyun = new Oyun();
+        private readonly Oyun _oyun;
         public Form2()
         {
             InitializeComponent();
+            _oyun = new Oyun(arabaPanel);
             label2.Text = Form1.adSoyad;
             label3.Text = Form1.urunAd;
             label11.Text = Form1.urunMiktari;
+            _oyun.KalanSureDegisti -= Oyun_KalanSureDegisti;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -47,6 +49,10 @@ namespace NDPProje
                     _oyun.kutuHareket(Yon.Sag);
                     break;
             }
+        }
+        private void Oyun_KalanSureDegisti(object sender,EventArgs e)
+        {
+            label7.Text = $"{_oyun.KalanSure.Seconds.ToString("D2")}";
         }
     }
 }

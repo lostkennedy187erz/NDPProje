@@ -45,10 +45,13 @@ namespace NDPProje
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.oyunPanel = new System.Windows.Forms.Panel();
+            this.arabaPanel = new System.Windows.Forms.Panel();
             this.gösterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.oyunPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gösterge
@@ -120,9 +123,9 @@ namespace NDPProje
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.Location = new System.Drawing.Point(84, 74);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 55);
+            this.label7.Size = new System.Drawing.Size(108, 55);
             this.label7.TabIndex = 6;
-            this.label7.Text = "00";
+            this.label7.Text = "120";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -216,11 +219,30 @@ namespace NDPProje
             this.label1.TabIndex = 0;
             this.label1.Text = "Kalan Süre (sn)";
             // 
+            // oyunPanel
+            // 
+            this.oyunPanel.Controls.Add(this.arabaPanel);
+            this.oyunPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.oyunPanel.Location = new System.Drawing.Point(0, 0);
+            this.oyunPanel.Name = "oyunPanel";
+            this.oyunPanel.Size = new System.Drawing.Size(782, 659);
+            this.oyunPanel.TabIndex = 1;
+            // 
+            // arabaPanel
+            // 
+            this.arabaPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.arabaPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.arabaPanel.Location = new System.Drawing.Point(0, 595);
+            this.arabaPanel.Name = "arabaPanel";
+            this.arabaPanel.Size = new System.Drawing.Size(782, 64);
+            this.arabaPanel.TabIndex = 0;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 659);
+            this.Controls.Add(this.oyunPanel);
             this.Controls.Add(this.gösterge);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
@@ -232,6 +254,7 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.oyunPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -253,5 +276,7 @@ namespace NDPProje
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel oyunPanel;
+        private System.Windows.Forms.Panel arabaPanel;
     }
 }
