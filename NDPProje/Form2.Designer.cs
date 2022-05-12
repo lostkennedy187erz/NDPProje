@@ -51,8 +51,12 @@ namespace NDPProje
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
             this.arabaPanel = new System.Windows.Forms.Panel();
-            this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.arabapicbox = new System.Windows.Forms.PictureBox();
+            this.KalanSure = new System.Windows.Forms.Timer(this.components);
+            this.benzinpicbox = new System.Windows.Forms.PictureBox();
+            this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
+            this.motorpicbox = new System.Windows.Forms.PictureBox();
+            this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
             this.gösterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -60,6 +64,9 @@ namespace NDPProje
             this.oyunPanel.SuspendLayout();
             this.arabaPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).BeginInit();
             this.SuspendLayout();
             // 
             // gösterge
@@ -262,12 +269,16 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
+            this.oyunPanel.Controls.Add(this.motorpicbox);
+            this.oyunPanel.Controls.Add(this.tekerlekpicbox);
+            this.oyunPanel.Controls.Add(this.benzinpicbox);
             this.oyunPanel.Controls.Add(this.arabaPanel);
             this.oyunPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.oyunPanel.Location = new System.Drawing.Point(0, 0);
             this.oyunPanel.Name = "oyunPanel";
             this.oyunPanel.Size = new System.Drawing.Size(782, 659);
             this.oyunPanel.TabIndex = 1;
+            this.oyunPanel.Tag = "malzeme";
             // 
             // arabaPanel
             // 
@@ -279,11 +290,6 @@ namespace NDPProje
             this.arabaPanel.Size = new System.Drawing.Size(782, 64);
             this.arabaPanel.TabIndex = 0;
             // 
-            // KalanSure
-            // 
-            this.KalanSure.Interval = 1000;
-            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
-            // 
             // arabapicbox
             // 
             this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
@@ -293,6 +299,46 @@ namespace NDPProje
             this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.arabapicbox.TabIndex = 0;
             this.arabapicbox.TabStop = false;
+            // 
+            // KalanSure
+            // 
+            this.KalanSure.Interval = 1000;
+            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
+            // 
+            // benzinpicbox
+            // 
+            this.benzinpicbox.Image = ((System.Drawing.Image)(resources.GetObject("benzinpicbox.Image")));
+            this.benzinpicbox.Location = new System.Drawing.Point(188, 27);
+            this.benzinpicbox.Name = "benzinpicbox";
+            this.benzinpicbox.Size = new System.Drawing.Size(64, 64);
+            this.benzinpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.benzinpicbox.TabIndex = 1;
+            this.benzinpicbox.TabStop = false;
+            // 
+            // tekerlekpicbox
+            // 
+            this.tekerlekpicbox.Image = ((System.Drawing.Image)(resources.GetObject("tekerlekpicbox.Image")));
+            this.tekerlekpicbox.Location = new System.Drawing.Point(325, 27);
+            this.tekerlekpicbox.Name = "tekerlekpicbox";
+            this.tekerlekpicbox.Size = new System.Drawing.Size(64, 64);
+            this.tekerlekpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.tekerlekpicbox.TabIndex = 2;
+            this.tekerlekpicbox.TabStop = false;
+            // 
+            // motorpicbox
+            // 
+            this.motorpicbox.Image = ((System.Drawing.Image)(resources.GetObject("motorpicbox.Image")));
+            this.motorpicbox.Location = new System.Drawing.Point(473, 27);
+            this.motorpicbox.Name = "motorpicbox";
+            this.motorpicbox.Size = new System.Drawing.Size(64, 64);
+            this.motorpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.motorpicbox.TabIndex = 3;
+            this.motorpicbox.TabStop = false;
+            // 
+            // malzemeTimer
+            // 
+            this.malzemeTimer.Interval = 20;
+            this.malzemeTimer.Tick += new System.EventHandler(this.malzemeTimer_Tick);
             // 
             // Form2
             // 
@@ -312,9 +358,13 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.oyunPanel.ResumeLayout(false);
+            this.oyunPanel.PerformLayout();
             this.arabaPanel.ResumeLayout(false);
             this.arabaPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,5 +393,9 @@ namespace NDPProje
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Timer KalanSure;
         private System.Windows.Forms.PictureBox arabapicbox;
+        private System.Windows.Forms.PictureBox motorpicbox;
+        private System.Windows.Forms.PictureBox tekerlekpicbox;
+        private System.Windows.Forms.PictureBox benzinpicbox;
+        private System.Windows.Forms.Timer malzemeTimer;
     }
 }

@@ -58,5 +58,10 @@ namespace NDPProje
             sure = sure - 1;
             kalansurelbl.Text = Convert.ToString(sure);
         }
+
+        private void malzemeTimer_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿using ProjeLibrary.Enum;
+﻿//Ad Soyad : İBRAHİM ÇELEN
+//Numara : B201200014
+//Bölüm : BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ
+using ProjeLibrary.Enum;
 using ProjeLibrary.Interface;
 using System;
 using System.Windows.Forms;
@@ -16,6 +19,7 @@ namespace ProjeLibrary.Somut
         public readonly Timer _kalanSureTimer = new Timer { Interval = 1000 };
         private TimeSpan _kalanSure;
         private readonly Panel _arabaPanel;
+        Random randX = new Random();
         #endregion
 
         #region Olaylar
