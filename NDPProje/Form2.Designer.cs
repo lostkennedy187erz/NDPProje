@@ -29,13 +29,17 @@ namespace NDPProje
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.gösterge = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.kalansurelbl = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,21 +51,28 @@ namespace NDPProje
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
             this.arabaPanel = new System.Windows.Forms.Panel();
+            this.KalanSure = new System.Windows.Forms.Timer(this.components);
+            this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.gösterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.oyunPanel.SuspendLayout();
+            this.arabaPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
             this.SuspendLayout();
             // 
             // gösterge
             // 
             this.gösterge.BackColor = System.Drawing.Color.SkyBlue;
+            this.gösterge.Controls.Add(this.label14);
+            this.gösterge.Controls.Add(this.label13);
+            this.gösterge.Controls.Add(this.label12);
             this.gösterge.Controls.Add(this.label10);
             this.gösterge.Controls.Add(this.label11);
             this.gösterge.Controls.Add(this.label9);
             this.gösterge.Controls.Add(this.label8);
-            this.gösterge.Controls.Add(this.label7);
+            this.gösterge.Controls.Add(this.kalansurelbl);
             this.gösterge.Controls.Add(this.label6);
             this.gösterge.Controls.Add(this.label5);
             this.gösterge.Controls.Add(this.label4);
@@ -76,6 +87,36 @@ namespace NDPProje
             this.gösterge.Name = "gösterge";
             this.gösterge.Size = new System.Drawing.Size(246, 659);
             this.gösterge.TabIndex = 0;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(35, 469);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(14, 13);
+            this.label14.TabIndex = 12;
+            this.label14.Text = "3";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.Location = new System.Drawing.Point(35, 390);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(14, 13);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "2";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(35, 320);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(14, 13);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "1";
             // 
             // label10
             // 
@@ -117,16 +158,16 @@ namespace NDPProje
             this.label8.TabIndex = 7;
             this.label8.Text = "Toplam Yapılan  :";
             // 
-            // label7
+            // kalansurelbl
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(84, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(108, 55);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "120";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.kalansurelbl.AutoSize = true;
+            this.kalansurelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kalansurelbl.Location = new System.Drawing.Point(76, 75);
+            this.kalansurelbl.Name = "kalansurelbl";
+            this.kalansurelbl.Size = new System.Drawing.Size(108, 55);
+            this.kalansurelbl.TabIndex = 6;
+            this.kalansurelbl.Text = "120";
+            this.kalansurelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
             // 
@@ -231,11 +272,27 @@ namespace NDPProje
             // arabaPanel
             // 
             this.arabaPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.arabaPanel.Controls.Add(this.arabapicbox);
             this.arabaPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.arabaPanel.Location = new System.Drawing.Point(0, 595);
             this.arabaPanel.Name = "arabaPanel";
             this.arabaPanel.Size = new System.Drawing.Size(782, 64);
             this.arabaPanel.TabIndex = 0;
+            // 
+            // KalanSure
+            // 
+            this.KalanSure.Interval = 1000;
+            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
+            // 
+            // arabapicbox
+            // 
+            this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
+            this.arabapicbox.Location = new System.Drawing.Point(381, 0);
+            this.arabapicbox.Name = "arabapicbox";
+            this.arabapicbox.Size = new System.Drawing.Size(64, 64);
+            this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.arabapicbox.TabIndex = 0;
+            this.arabapicbox.TabStop = false;
             // 
             // Form2
             // 
@@ -255,6 +312,9 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.oyunPanel.ResumeLayout(false);
+            this.arabaPanel.ResumeLayout(false);
+            this.arabaPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,8 +335,13 @@ namespace NDPProje
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label kalansurelbl;
         private System.Windows.Forms.Panel oyunPanel;
         private System.Windows.Forms.Panel arabaPanel;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Timer KalanSure;
+        private System.Windows.Forms.PictureBox arabapicbox;
     }
 }

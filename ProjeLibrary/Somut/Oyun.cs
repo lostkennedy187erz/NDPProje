@@ -40,30 +40,14 @@ namespace ProjeLibrary.Somut
         public Oyun(Panel arabaPanel)
         {
             _arabaPanel = arabaPanel;
-            _kalanSureTimer.Tick -= KalanSureTimer_Tick;
+            
         }
-        private void KalanSureTimer_Tick(object sender, EventArgs e)
-        {
-            KalanSure -= TimeSpan.FromSeconds(1);
-        }
+
         public void Baslat()
         {
             if (DevamEdiyorMu) return;
 
             DevamEdiyorMu = true;
-            _kalanSureTimer.Start();
-
-            ArabaOlustur();
-
-        }
-
-        private void ArabaOlustur()
-        {
-            var araba = new Araba(_arabaPanel.Width) 
-            { 
-                Image = Image.FromFile($@"C:\Users\İbrahim Çelen\Downloads\araba.png") 
-            };
-            _arabaPanel.Controls.Add(araba);
         }
 
         private void Bitir()
@@ -75,12 +59,12 @@ namespace ProjeLibrary.Somut
 
         public void Duraklat()
         {
-            _kalanSureTimer.Stop();
+            
         }
 
         public void kutuHareket(Yon yon)
         {
-            throw new NotImplementedException();
+            
         }
         #endregion
 
