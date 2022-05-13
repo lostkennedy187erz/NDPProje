@@ -25,6 +25,7 @@ namespace NDPProje
         public int tekerpuan;
         public int motorpuan;
         public int benzinpuan;
+        public int skor;
         private readonly Oyun _oyun;
         public Form2()
         {
@@ -43,10 +44,28 @@ namespace NDPProje
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            _oyun.Baslat();
+            Basla();
+            Topla();
+        }
+        public void Basla()
+        {
             KalanSure.Start();
             malzemeTimer.Start();
-            _oyun.Topla();
+            foreach (Control x in this.Controls)
+            {
+                if(x is PictureBox && (string)x.Tag == "malzeme")
+                {
+                    x.Top = rnd.Next(40, 200) * -1;
+                    x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
+                }
+            }
+        }
+        public void Bitis()
+        {
+            KalanSure.Stop();
+            malzemeTimer.Stop();
+            skor = Convert.ToInt32(kalansurelbl.Text) * 3;
+            scorelbl.Text = ("Skor : " + skor.ToString());
         }
 
         private void Form2_KeyDown(object sender, KeyEventArgs e)
@@ -77,6 +96,22 @@ namespace NDPProje
         {
             sure = sure - 1;
             kalansurelbl.Text = Convert.ToString(sure);
+            gostergebenzin.Text = benzinpuan.ToString();
+            gostergemotor.Text = motorpuan.ToString();
+            gostergeteker.Text = tekerpuan.ToString();
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "malzeme")
+                {
+                    x.Top += malzemeHiz;
+
+                    if (x.Top + x.Height > this.ClientSize.Height)
+                    {
+                        x.Top = rnd.Next(40, 200) * -1;
+                        x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
+                    }
+                }
+            }
         }
 
         private void malzemeTimer_Tick(object sender, EventArgs e)
@@ -87,41 +122,41 @@ namespace NDPProje
         }
         public void Topla()
         {
-            if (tekerlekpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
+            /*if (tekerlekpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 tekerpuan += 1;
                 gostergeteker.Text = tekerpuan.ToString();
                 tekerlekpicbox.Top = rnd.Next(1, 200) * -1;
-                tekerlekpicbox.Left = rnd.Next(1, 300);
+                tekerlekpicbox.Left = rnd.Next(20, 700);
             }
             else if (benzinpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 benzinpuan += 1;
                 gostergebenzin.Text = benzinpuan.ToString();
                 benzinpicbox.Top = rnd.Next(1, 700) * -1;
-                benzinpicbox.Left = rnd.Next(1, 400);
+                benzinpicbox.Left = rnd.Next(20, 700);
             }
             else if (motorpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 motorpuan += 1;
                 gostergemotor.Text = motorpuan.ToString();
                 motorpicbox.Top = rnd.Next(1, 500) * -1;
-                motorpicbox.Left = rnd.Next(1, 400);
-            }
-            else if (tekerlekpicbox.Top > 750)
+                motorpicbox.Left = rnd.Next(20, 700);
+            }*/
+            if (tekerlekpicbox.Top > 790)
             {
                 tekerlekpicbox.Top = rnd.Next(1, 200) * -1;
-                tekerlekpicbox.Left = rnd.Next(1, 300);
+                tekerlekpicbox.Left = rnd.Next(20, 700);
             }
-            else if(benzinpicbox.Top > 750)
+            else if(benzinpicbox.Top > 790)
             {
                 benzinpicbox.Top = rnd.Next(1, 700) * -1;
-                benzinpicbox.Left = rnd.Next(1, 400);
+                benzinpicbox.Left = rnd.Next(20, 700);
             }
-            else if (motorpicbox.Top > 750)
+            else if (motorpicbox.Top > 790)
             {
                 motorpicbox.Top = rnd.Next(1, 500) * -1;
-                motorpicbox.Left = rnd.Next(1, 400);
+                motorpicbox.Left = rnd.Next(20, 700);
             }
         }
 

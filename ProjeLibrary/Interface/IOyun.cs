@@ -7,7 +7,5 @@ namespace ProjeLibrary.Interface
 {
     internal interface IOyun
     {
-        void Baslat();
-        void Topla();
     }
 }

@@ -50,21 +50,22 @@ namespace NDPProje
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
+            this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.motorpicbox = new System.Windows.Forms.PictureBox();
             this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
             this.benzinpicbox = new System.Windows.Forms.PictureBox();
-            this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
+            this.scorelbl = new System.Windows.Forms.Label();
             this.gösterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.oyunPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
             this.SuspendLayout();
             // 
             // gösterge
@@ -129,9 +130,9 @@ namespace NDPProje
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.Location = new System.Drawing.Point(197, 208);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(27, 25);
+            this.label10.Size = new System.Drawing.Size(24, 25);
             this.label10.TabIndex = 9;
-            this.label10.Text = "A";
+            this.label10.Text = "0";
             // 
             // label11
             // 
@@ -182,7 +183,7 @@ namespace NDPProje
             this.gostergeteker.Name = "gostergeteker";
             this.gostergeteker.Size = new System.Drawing.Size(52, 55);
             this.gostergeteker.TabIndex = 5;
-            this.gostergeteker.Text = "3";
+            this.gostergeteker.Text = "0";
             // 
             // gostergemotor
             // 
@@ -192,7 +193,7 @@ namespace NDPProje
             this.gostergemotor.Name = "gostergemotor";
             this.gostergemotor.Size = new System.Drawing.Size(52, 55);
             this.gostergemotor.TabIndex = 4;
-            this.gostergemotor.Text = "2";
+            this.gostergemotor.Text = "0";
             // 
             // gostergebenzin
             // 
@@ -202,7 +203,7 @@ namespace NDPProje
             this.gostergebenzin.Name = "gostergebenzin";
             this.gostergebenzin.Size = new System.Drawing.Size(52, 55);
             this.gostergebenzin.TabIndex = 1;
-            this.gostergebenzin.Text = "1";
+            this.gostergebenzin.Text = "0";
             // 
             // pictureBox2
             // 
@@ -227,7 +228,7 @@ namespace NDPProje
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(3, 625);
+            this.label3.Location = new System.Drawing.Point(3, 642);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 25);
             this.label3.TabIndex = 2;
@@ -238,7 +239,7 @@ namespace NDPProje
             // 
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(3, 585);
+            this.label2.Location = new System.Drawing.Point(3, 605);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 25);
             this.label2.TabIndex = 1;
@@ -267,6 +268,7 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
+            this.oyunPanel.Controls.Add(this.scorelbl);
             this.oyunPanel.Controls.Add(this.arabapicbox);
             this.oyunPanel.Controls.Add(this.motorpicbox);
             this.oyunPanel.Controls.Add(this.tekerlekpicbox);
@@ -276,37 +278,7 @@ namespace NDPProje
             this.oyunPanel.Name = "oyunPanel";
             this.oyunPanel.Size = new System.Drawing.Size(789, 720);
             this.oyunPanel.TabIndex = 1;
-            this.oyunPanel.Tag = "malzeme";
-            // 
-            // motorpicbox
-            // 
-            this.motorpicbox.Image = ((System.Drawing.Image)(resources.GetObject("motorpicbox.Image")));
-            this.motorpicbox.Location = new System.Drawing.Point(473, 27);
-            this.motorpicbox.Name = "motorpicbox";
-            this.motorpicbox.Size = new System.Drawing.Size(64, 64);
-            this.motorpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.motorpicbox.TabIndex = 3;
-            this.motorpicbox.TabStop = false;
-            // 
-            // tekerlekpicbox
-            // 
-            this.tekerlekpicbox.Image = ((System.Drawing.Image)(resources.GetObject("tekerlekpicbox.Image")));
-            this.tekerlekpicbox.Location = new System.Drawing.Point(325, 27);
-            this.tekerlekpicbox.Name = "tekerlekpicbox";
-            this.tekerlekpicbox.Size = new System.Drawing.Size(64, 64);
-            this.tekerlekpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.tekerlekpicbox.TabIndex = 2;
-            this.tekerlekpicbox.TabStop = false;
-            // 
-            // benzinpicbox
-            // 
-            this.benzinpicbox.Image = ((System.Drawing.Image)(resources.GetObject("benzinpicbox.Image")));
-            this.benzinpicbox.Location = new System.Drawing.Point(188, 27);
-            this.benzinpicbox.Name = "benzinpicbox";
-            this.benzinpicbox.Size = new System.Drawing.Size(64, 64);
-            this.benzinpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.benzinpicbox.TabIndex = 1;
-            this.benzinpicbox.TabStop = false;
+            this.oyunPanel.Tag = "";
             // 
             // arabapicbox
             // 
@@ -318,6 +290,39 @@ namespace NDPProje
             this.arabapicbox.TabIndex = 0;
             this.arabapicbox.TabStop = false;
             // 
+            // motorpicbox
+            // 
+            this.motorpicbox.Image = ((System.Drawing.Image)(resources.GetObject("motorpicbox.Image")));
+            this.motorpicbox.Location = new System.Drawing.Point(439, 27);
+            this.motorpicbox.Name = "motorpicbox";
+            this.motorpicbox.Size = new System.Drawing.Size(64, 64);
+            this.motorpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.motorpicbox.TabIndex = 3;
+            this.motorpicbox.TabStop = false;
+            this.motorpicbox.Tag = "malzeme";
+            // 
+            // tekerlekpicbox
+            // 
+            this.tekerlekpicbox.Image = ((System.Drawing.Image)(resources.GetObject("tekerlekpicbox.Image")));
+            this.tekerlekpicbox.Location = new System.Drawing.Point(325, 27);
+            this.tekerlekpicbox.Name = "tekerlekpicbox";
+            this.tekerlekpicbox.Size = new System.Drawing.Size(64, 64);
+            this.tekerlekpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.tekerlekpicbox.TabIndex = 2;
+            this.tekerlekpicbox.TabStop = false;
+            this.tekerlekpicbox.Tag = "malzeme";
+            // 
+            // benzinpicbox
+            // 
+            this.benzinpicbox.Image = ((System.Drawing.Image)(resources.GetObject("benzinpicbox.Image")));
+            this.benzinpicbox.Location = new System.Drawing.Point(188, 27);
+            this.benzinpicbox.Name = "benzinpicbox";
+            this.benzinpicbox.Size = new System.Drawing.Size(64, 64);
+            this.benzinpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.benzinpicbox.TabIndex = 1;
+            this.benzinpicbox.TabStop = false;
+            this.benzinpicbox.Tag = "malzeme";
+            // 
             // KalanSure
             // 
             this.KalanSure.Interval = 1000;
@@ -327,6 +332,16 @@ namespace NDPProje
             // 
             this.malzemeTimer.Interval = 20;
             this.malzemeTimer.Tick += new System.EventHandler(this.malzemeTimer_Tick);
+            // 
+            // scorelbl
+            // 
+            this.scorelbl.AutoSize = true;
+            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.scorelbl.Location = new System.Drawing.Point(315, 329);
+            this.scorelbl.Name = "scorelbl";
+            this.scorelbl.Size = new System.Drawing.Size(0, 55);
+            this.scorelbl.TabIndex = 4;
+            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form2
             // 
@@ -347,10 +362,10 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.oyunPanel.ResumeLayout(false);
             this.oyunPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +397,6 @@ namespace NDPProje
         private System.Windows.Forms.PictureBox tekerlekpicbox;
         private System.Windows.Forms.PictureBox benzinpicbox;
         private System.Windows.Forms.Timer malzemeTimer;
+        private System.Windows.Forms.Label scorelbl;
     }
 }
