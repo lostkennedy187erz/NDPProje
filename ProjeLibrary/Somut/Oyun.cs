@@ -1,15 +1,8 @@
 ﻿//Ad Soyad : İBRAHİM ÇELEN
 //Numara : B201200014
 //Bölüm : BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ
-using ProjeLibrary.Enum;
 using ProjeLibrary.Interface;
-using System;
 using System.Windows.Forms;
-using System.Drawing;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProjeLibrary.Somut
 {

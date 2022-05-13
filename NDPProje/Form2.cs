@@ -51,14 +51,6 @@ namespace NDPProje
         {
             KalanSure.Start();
             malzemeTimer.Start();
-            foreach (Control x in this.Controls)
-            {
-                if(x is PictureBox && (string)x.Tag == "malzeme")
-                {
-                    x.Top = rnd.Next(40, 200) * -1;
-                    x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
-                }
-            }
         }
         public void Bitis()
         {
@@ -96,22 +88,22 @@ namespace NDPProje
         {
             sure = sure - 1;
             kalansurelbl.Text = Convert.ToString(sure);
-            gostergebenzin.Text = benzinpuan.ToString();
-            gostergemotor.Text = motorpuan.ToString();
-            gostergeteker.Text = tekerpuan.ToString();
             foreach (Control x in this.Controls)
             {
                 if (x is PictureBox && (string)x.Tag == "malzeme")
                 {
-                    x.Top += malzemeHiz;
-
-                    if (x.Top + x.Height > this.ClientSize.Height)
-                    {
-                        x.Top = rnd.Next(40, 200) * -1;
-                        x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
-                    }
+                    x.Top = rnd.Next(40, 200) * -1;
+                    x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
+                }
+                if (x.Bounds.IntersectsWith(arabapicbox.Bounds))
+                {
+                    x.Top = rnd.Next(40, 200) * -1;
+                    x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
                 }
             }
+            gostergebenzin.Text = benzinpuan.ToString();
+            gostergemotor.Text = motorpuan.ToString();
+            gostergeteker.Text = tekerpuan.ToString();
         }
 
         private void malzemeTimer_Tick(object sender, EventArgs e)
@@ -119,10 +111,11 @@ namespace NDPProje
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
             motorpicbox.Top += malzemeHiz;
+            
         }
         public void Topla()
         {
-            /*if (tekerlekpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
+            if (tekerlekpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 tekerpuan += 1;
                 gostergeteker.Text = tekerpuan.ToString();
@@ -142,11 +135,12 @@ namespace NDPProje
                 gostergemotor.Text = motorpuan.ToString();
                 motorpicbox.Top = rnd.Next(1, 500) * -1;
                 motorpicbox.Left = rnd.Next(20, 700);
-            }*/
+            }
+
             if (tekerlekpicbox.Top > 790)
             {
                 tekerlekpicbox.Top = rnd.Next(1, 200) * -1;
-                tekerlekpicbox.Left = rnd.Next(20, 700);
+                tekerlekpicbox.Left = rnd.Next(oyunPanel.Width);
             }
             else if(benzinpicbox.Top > 790)
             {
