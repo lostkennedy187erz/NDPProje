@@ -16,10 +16,11 @@ namespace ProjeLibrary.Somut
     public class Oyun : IOyun
     {
         #region Alanlar
+
         public readonly Timer _kalanSureTimer = new Timer { Interval = 1000 };
         private TimeSpan _kalanSure;
         private readonly Panel _arabaPanel;
-        Random randX = new Random();
+        Random rnd = new Random();
         #endregion
 
         #region Olaylar
@@ -60,15 +61,44 @@ namespace ProjeLibrary.Somut
 
             DevamEdiyorMu = false;
         }
-
-        public void Duraklat()
+        public void Topla()
         {
-            
-        }
-
-        public void kutuHareket(Yon yon)
-        {
-            
+            if (tekerlekpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
+            {
+                tekerpuan += 1;
+                gostergeteker.Text = tekerpuan.ToString();
+                tekerlekpicbox.Top = rnd.Next(1, 200) * -1;
+                tekerlekpicbox.Left = rnd.Next(1, 300);
+            }
+            else if (benzinpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
+            {
+                benzinpuan += 1;
+                gostergebenzin.Text = benzinpuan.ToString();
+                benzinpicbox.Top = rnd.Next(1, 700) * -1;
+                benzinpicbox.Left = rnd.Next(1, 400);
+            }
+            else if (motorpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
+            {
+                motorpuan += 1;
+                gostergemotor.Text = motorpuan.ToString();
+                motorpicbox.Top = rnd.Next(1, 500) * -1;
+                motorpicbox.Left = rnd.Next(1, 400);
+            }
+            else if (tekerlekpicbox.Top > 750)
+            {
+                tekerlekpicbox.Top = rnd.Next(1, 200) * -1;
+                tekerlekpicbox.Left = rnd.Next(1, 300);
+            }
+            else if (benzinpicbox.Top > 750)
+            {
+                benzinpicbox.Top = rnd.Next(1, 700) * -1;
+                benzinpicbox.Left = rnd.Next(1, 400);
+            }
+            else if (motorpicbox.Top > 750)
+            {
+                motorpicbox.Top = rnd.Next(1, 500) * -1;
+                motorpicbox.Left = rnd.Next(1, 400);
+            }
         }
         #endregion
 

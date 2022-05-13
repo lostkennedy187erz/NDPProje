@@ -27,13 +27,13 @@ namespace NDPProje
         private void label9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
-                "\nOyunu duraklatmak için P tuşunu kullanınız.");
+                "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.");
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
-                "\nOyunu duraklatmak için P tuşunu kullanınız.");
+                "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.");
         }
 
         private void button1_Click(object sender, EventArgs e)

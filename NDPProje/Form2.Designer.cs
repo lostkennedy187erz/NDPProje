@@ -40,9 +40,9 @@ namespace NDPProje
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.kalansurelbl = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.gostergeteker = new System.Windows.Forms.Label();
+            this.gostergemotor = new System.Windows.Forms.Label();
+            this.gostergebenzin = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -50,23 +50,21 @@ namespace NDPProje
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
-            this.arabaPanel = new System.Windows.Forms.Panel();
+            this.motorpicbox = new System.Windows.Forms.PictureBox();
+            this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
+            this.benzinpicbox = new System.Windows.Forms.PictureBox();
             this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
-            this.benzinpicbox = new System.Windows.Forms.PictureBox();
-            this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
-            this.motorpicbox = new System.Windows.Forms.PictureBox();
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
             this.gösterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.oyunPanel.SuspendLayout();
-            this.arabaPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
             this.SuspendLayout();
             // 
             // gösterge
@@ -80,9 +78,9 @@ namespace NDPProje
             this.gösterge.Controls.Add(this.label9);
             this.gösterge.Controls.Add(this.label8);
             this.gösterge.Controls.Add(this.kalansurelbl);
-            this.gösterge.Controls.Add(this.label6);
-            this.gösterge.Controls.Add(this.label5);
-            this.gösterge.Controls.Add(this.label4);
+            this.gösterge.Controls.Add(this.gostergeteker);
+            this.gösterge.Controls.Add(this.gostergemotor);
+            this.gösterge.Controls.Add(this.gostergebenzin);
             this.gösterge.Controls.Add(this.pictureBox2);
             this.gösterge.Controls.Add(this.pictureBox3);
             this.gösterge.Controls.Add(this.label3);
@@ -90,9 +88,9 @@ namespace NDPProje
             this.gösterge.Controls.Add(this.pictureBox1);
             this.gösterge.Controls.Add(this.label1);
             this.gösterge.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gösterge.Location = new System.Drawing.Point(781, 0);
+            this.gösterge.Location = new System.Drawing.Point(788, 0);
             this.gösterge.Name = "gösterge";
-            this.gösterge.Size = new System.Drawing.Size(246, 659);
+            this.gösterge.Size = new System.Drawing.Size(239, 720);
             this.gösterge.TabIndex = 0;
             // 
             // label14
@@ -176,35 +174,35 @@ namespace NDPProje
             this.kalansurelbl.Text = "120";
             this.kalansurelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // gostergeteker
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.Location = new System.Drawing.Point(149, 478);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 55);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "3";
+            this.gostergeteker.AutoSize = true;
+            this.gostergeteker.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gostergeteker.Location = new System.Drawing.Point(149, 478);
+            this.gostergeteker.Name = "gostergeteker";
+            this.gostergeteker.Size = new System.Drawing.Size(52, 55);
+            this.gostergeteker.TabIndex = 5;
+            this.gostergeteker.Text = "3";
             // 
-            // label5
+            // gostergemotor
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(149, 399);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 55);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "2";
+            this.gostergemotor.AutoSize = true;
+            this.gostergemotor.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gostergemotor.Location = new System.Drawing.Point(149, 399);
+            this.gostergemotor.Name = "gostergemotor";
+            this.gostergemotor.Size = new System.Drawing.Size(52, 55);
+            this.gostergemotor.TabIndex = 4;
+            this.gostergemotor.Text = "2";
             // 
-            // label4
+            // gostergebenzin
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(149, 329);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 55);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "1";
+            this.gostergebenzin.AutoSize = true;
+            this.gostergebenzin.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gostergebenzin.Location = new System.Drawing.Point(149, 329);
+            this.gostergebenzin.Name = "gostergebenzin";
+            this.gostergebenzin.Size = new System.Drawing.Size(52, 55);
+            this.gostergebenzin.TabIndex = 1;
+            this.gostergebenzin.Text = "1";
             // 
             // pictureBox2
             // 
@@ -240,7 +238,7 @@ namespace NDPProje
             // 
             this.label2.Cursor = System.Windows.Forms.Cursors.Default;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(3, 586);
+            this.label2.Location = new System.Drawing.Point(3, 585);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 25);
             this.label2.TabIndex = 1;
@@ -269,61 +267,16 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
+            this.oyunPanel.Controls.Add(this.arabapicbox);
             this.oyunPanel.Controls.Add(this.motorpicbox);
             this.oyunPanel.Controls.Add(this.tekerlekpicbox);
             this.oyunPanel.Controls.Add(this.benzinpicbox);
-            this.oyunPanel.Controls.Add(this.arabaPanel);
             this.oyunPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.oyunPanel.Location = new System.Drawing.Point(0, 0);
             this.oyunPanel.Name = "oyunPanel";
-            this.oyunPanel.Size = new System.Drawing.Size(782, 659);
+            this.oyunPanel.Size = new System.Drawing.Size(789, 720);
             this.oyunPanel.TabIndex = 1;
             this.oyunPanel.Tag = "malzeme";
-            // 
-            // arabaPanel
-            // 
-            this.arabaPanel.BackColor = System.Drawing.SystemColors.Control;
-            this.arabaPanel.Controls.Add(this.arabapicbox);
-            this.arabaPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.arabaPanel.Location = new System.Drawing.Point(0, 595);
-            this.arabaPanel.Name = "arabaPanel";
-            this.arabaPanel.Size = new System.Drawing.Size(782, 64);
-            this.arabaPanel.TabIndex = 0;
-            // 
-            // arabapicbox
-            // 
-            this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
-            this.arabapicbox.Location = new System.Drawing.Point(381, 0);
-            this.arabapicbox.Name = "arabapicbox";
-            this.arabapicbox.Size = new System.Drawing.Size(64, 64);
-            this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.arabapicbox.TabIndex = 0;
-            this.arabapicbox.TabStop = false;
-            // 
-            // KalanSure
-            // 
-            this.KalanSure.Interval = 1000;
-            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
-            // 
-            // benzinpicbox
-            // 
-            this.benzinpicbox.Image = ((System.Drawing.Image)(resources.GetObject("benzinpicbox.Image")));
-            this.benzinpicbox.Location = new System.Drawing.Point(188, 27);
-            this.benzinpicbox.Name = "benzinpicbox";
-            this.benzinpicbox.Size = new System.Drawing.Size(64, 64);
-            this.benzinpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.benzinpicbox.TabIndex = 1;
-            this.benzinpicbox.TabStop = false;
-            // 
-            // tekerlekpicbox
-            // 
-            this.tekerlekpicbox.Image = ((System.Drawing.Image)(resources.GetObject("tekerlekpicbox.Image")));
-            this.tekerlekpicbox.Location = new System.Drawing.Point(325, 27);
-            this.tekerlekpicbox.Name = "tekerlekpicbox";
-            this.tekerlekpicbox.Size = new System.Drawing.Size(64, 64);
-            this.tekerlekpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.tekerlekpicbox.TabIndex = 2;
-            this.tekerlekpicbox.TabStop = false;
             // 
             // motorpicbox
             // 
@@ -335,6 +288,41 @@ namespace NDPProje
             this.motorpicbox.TabIndex = 3;
             this.motorpicbox.TabStop = false;
             // 
+            // tekerlekpicbox
+            // 
+            this.tekerlekpicbox.Image = ((System.Drawing.Image)(resources.GetObject("tekerlekpicbox.Image")));
+            this.tekerlekpicbox.Location = new System.Drawing.Point(325, 27);
+            this.tekerlekpicbox.Name = "tekerlekpicbox";
+            this.tekerlekpicbox.Size = new System.Drawing.Size(64, 64);
+            this.tekerlekpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.tekerlekpicbox.TabIndex = 2;
+            this.tekerlekpicbox.TabStop = false;
+            // 
+            // benzinpicbox
+            // 
+            this.benzinpicbox.Image = ((System.Drawing.Image)(resources.GetObject("benzinpicbox.Image")));
+            this.benzinpicbox.Location = new System.Drawing.Point(188, 27);
+            this.benzinpicbox.Name = "benzinpicbox";
+            this.benzinpicbox.Size = new System.Drawing.Size(64, 64);
+            this.benzinpicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.benzinpicbox.TabIndex = 1;
+            this.benzinpicbox.TabStop = false;
+            // 
+            // arabapicbox
+            // 
+            this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
+            this.arabapicbox.Location = new System.Drawing.Point(375, 656);
+            this.arabapicbox.Name = "arabapicbox";
+            this.arabapicbox.Size = new System.Drawing.Size(64, 64);
+            this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.arabapicbox.TabIndex = 0;
+            this.arabapicbox.TabStop = false;
+            // 
+            // KalanSure
+            // 
+            this.KalanSure.Interval = 1000;
+            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
+            // 
             // malzemeTimer
             // 
             this.malzemeTimer.Interval = 20;
@@ -344,7 +332,7 @@ namespace NDPProje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1027, 659);
+            this.ClientSize = new System.Drawing.Size(1027, 720);
             this.Controls.Add(this.oyunPanel);
             this.Controls.Add(this.gösterge);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -359,12 +347,10 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.oyunPanel.ResumeLayout(false);
             this.oyunPanel.PerformLayout();
-            this.arabaPanel.ResumeLayout(false);
-            this.arabaPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -375,9 +361,9 @@ namespace NDPProje
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label gostergeteker;
+        private System.Windows.Forms.Label gostergemotor;
+        private System.Windows.Forms.Label gostergebenzin;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -387,7 +373,6 @@ namespace NDPProje
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label kalansurelbl;
         private System.Windows.Forms.Panel oyunPanel;
-        private System.Windows.Forms.Panel arabaPanel;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
