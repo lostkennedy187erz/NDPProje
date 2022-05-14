@@ -54,6 +54,7 @@ namespace NDPProje
         {
             KalanSure.Stop();
             malzemeTimer.Stop();
+            skor += sureskor;
             oyunbitislbl.Text = "Oyun Bitti...";
             exitbtn.Visible = true;
             //scorelbl.Text = ("Skor : " + skor.ToString()); // oyun bittiğinde ekran ortasında skor görünecek.
@@ -91,7 +92,7 @@ namespace NDPProje
             kalansurelbl.Text = Convert.ToString(sure);
             skor = skorsayac;
             scorelbl.Text = ("Skor : " + skor.ToString());
-            if (sure == 110) // süre 0 ise oyun sonlanır.
+            if (sure == 0) // süre 0 ise oyun sonlanır.
             {
                 Bitis();
             }
@@ -140,7 +141,7 @@ namespace NDPProje
             {
                 tekerpuan += 1;
                 gostergeteker.Text = tekerpuan.ToString();
-                tekerlekpicbox.Top = rnd.Next(70, 400) * -1;
+                tekerlekpicbox.Top = rnd.Next(70, 300) * -1;
                 tekerlekpicbox.Left = rnd.Next(oyunPanel.Width - tekerlekpicbox.Width);
             }
             else if (benzinpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
@@ -168,7 +169,7 @@ namespace NDPProje
                 {
                     skorsayac += rnd.Next(1, 100) * -1;
                 }
-                giftbox.Top = rnd.Next(1000, 2000) * -1;
+                giftbox.Top = rnd.Next(1200, 2200) * -1;
                 giftbox.Left = rnd.Next(oyunPanel.Width - giftbox.Width);
             }
 
@@ -187,7 +188,6 @@ namespace NDPProje
                 tekerpuan = tekerpuan - 3;
                 if(kalanurun == 0)
                 {
-                    skor += sureskor;
                     Bitis();
                 }
             }
