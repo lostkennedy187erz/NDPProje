@@ -234,9 +234,9 @@ namespace NDPProje
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.Location = new System.Drawing.Point(152, 577);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(421, 20);
+            this.label9.Size = new System.Drawing.Size(525, 20);
             this.label9.TabIndex = 15;
-            this.label9.Text = "Oyun tuş takımı bilgilerine erişmek için tıklayınız.";
+            this.label9.Text = "Oyun tuş takımı bilgilerine ve kurallara erişmek için tıklayınız.";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
@@ -302,8 +302,10 @@ namespace NDPProje
             this.textBox5.ForeColor = System.Drawing.Color.White;
             this.textBox5.Location = new System.Drawing.Point(324, 224);
             this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
             this.textBox5.Size = new System.Drawing.Size(231, 30);
             this.textBox5.TabIndex = 21;
+            this.textBox5.Text = "5";
             this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox6

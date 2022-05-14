@@ -27,13 +27,15 @@ namespace NDPProje
         private void label9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
-                "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.");
+                "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.\nHer seferinde toplamda 5 ürün toplanmalıdır.\nHer bir ürün 100 puandır.\nEkstra malzeme puan getirmez." +
+                "\nÜrün toplaması bittiğinde kalan süre 3 ile çarpılıp skora eklenir.\nHediye kutuları size (200,800) arası puan kazandıracaktır veya kaybettirecektir.");
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
-                "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.");
+                "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.\nHer seferinde toplamda 5 ürün toplanmalıdır.\nHer bir ürün 100 puandır.\nEkstra malzeme puan getirmez." +
+                "\nÜrün toplaması bittiğinde kalan süre 3 ile çarpılıp skora eklenir.\nHediye kutuları size (200,800) arası puan kazandıracaktır veya kaybettirecektir.");
         }
 
         private void button1_Click(object sender, EventArgs e)

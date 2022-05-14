@@ -35,8 +35,8 @@ namespace NDPProje
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.yapılanurunlbl = new System.Windows.Forms.Label();
+            this.kalanurunlbl = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.kalansurelbl = new System.Windows.Forms.Label();
@@ -76,8 +76,8 @@ namespace NDPProje
             this.gosterge.Controls.Add(this.label14);
             this.gosterge.Controls.Add(this.label13);
             this.gosterge.Controls.Add(this.label12);
-            this.gosterge.Controls.Add(this.label10);
-            this.gosterge.Controls.Add(this.label11);
+            this.gosterge.Controls.Add(this.yapılanurunlbl);
+            this.gosterge.Controls.Add(this.kalanurunlbl);
             this.gosterge.Controls.Add(this.label9);
             this.gosterge.Controls.Add(this.label8);
             this.gosterge.Controls.Add(this.kalansurelbl);
@@ -126,25 +126,25 @@ namespace NDPProje
             this.label12.TabIndex = 1;
             this.label12.Text = "1";
             // 
-            // label10
+            // yapılanurunlbl
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(197, 208);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(24, 25);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "0";
+            this.yapılanurunlbl.AutoSize = true;
+            this.yapılanurunlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.yapılanurunlbl.Location = new System.Drawing.Point(197, 208);
+            this.yapılanurunlbl.Name = "yapılanurunlbl";
+            this.yapılanurunlbl.Size = new System.Drawing.Size(24, 25);
+            this.yapılanurunlbl.TabIndex = 9;
+            this.yapılanurunlbl.Text = "0";
             // 
-            // label11
+            // kalanurunlbl
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(197, 262);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 25);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "A";
+            this.kalanurunlbl.AutoSize = true;
+            this.kalanurunlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.kalanurunlbl.Location = new System.Drawing.Point(197, 262);
+            this.kalanurunlbl.Name = "kalanurunlbl";
+            this.kalanurunlbl.Size = new System.Drawing.Size(24, 25);
+            this.kalanurunlbl.TabIndex = 10;
+            this.kalanurunlbl.Text = "5";
             // 
             // label9
             // 
@@ -234,7 +234,7 @@ namespace NDPProje
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(226, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "26262";
+            this.label3.Text = "Ürün Adı";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -245,7 +245,7 @@ namespace NDPProje
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(231, 25);
             this.label2.TabIndex = 1;
-            this.label2.Text = "26262";
+            this.label2.Text = "Ad Soyad";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
@@ -396,8 +396,8 @@ namespace NDPProje
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label yapılanurunlbl;
+        private System.Windows.Forms.Label kalanurunlbl;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label kalansurelbl;
