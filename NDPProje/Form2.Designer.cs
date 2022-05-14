@@ -58,6 +58,7 @@ namespace NDPProje
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
             this.giftbox = new System.Windows.Forms.PictureBox();
+            this.oyunbitislbl = new System.Windows.Forms.Label();
             this.gosterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -75,6 +76,7 @@ namespace NDPProje
             this.gosterge.BackColor = System.Drawing.Color.SkyBlue;
             this.gosterge.Controls.Add(this.label14);
             this.gosterge.Controls.Add(this.label13);
+            this.gosterge.Controls.Add(this.scorelbl);
             this.gosterge.Controls.Add(this.label12);
             this.gosterge.Controls.Add(this.yapılanurunlbl);
             this.gosterge.Controls.Add(this.kalanurunlbl);
@@ -270,9 +272,9 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
+            this.oyunPanel.Controls.Add(this.oyunbitislbl);
             this.oyunPanel.Controls.Add(this.arabapicbox);
             this.oyunPanel.Controls.Add(this.giftbox);
-            this.oyunPanel.Controls.Add(this.scorelbl);
             this.oyunPanel.Controls.Add(this.motorpicbox);
             this.oyunPanel.Controls.Add(this.tekerlekpicbox);
             this.oyunPanel.Controls.Add(this.benzinpicbox);
@@ -285,13 +287,15 @@ namespace NDPProje
             // 
             // scorelbl
             // 
-            this.scorelbl.AutoSize = true;
-            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.scorelbl.Location = new System.Drawing.Point(252, 287);
+            this.scorelbl.BackColor = System.Drawing.Color.Transparent;
+            this.scorelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.scorelbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scorelbl.Location = new System.Drawing.Point(7, 140);
             this.scorelbl.Name = "scorelbl";
-            this.scorelbl.Size = new System.Drawing.Size(0, 55);
+            this.scorelbl.Size = new System.Drawing.Size(227, 55);
             this.scorelbl.TabIndex = 4;
-            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // arabapicbox
             // 
@@ -356,6 +360,17 @@ namespace NDPProje
             this.giftbox.TabIndex = 5;
             this.giftbox.TabStop = false;
             // 
+            // oyunbitislbl
+            // 
+            this.oyunbitislbl.AutoSize = true;
+            this.oyunbitislbl.BackColor = System.Drawing.Color.Transparent;
+            this.oyunbitislbl.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oyunbitislbl.Location = new System.Drawing.Point(246, 329);
+            this.oyunbitislbl.Name = "oyunbitislbl";
+            this.oyunbitislbl.Size = new System.Drawing.Size(0, 43);
+            this.oyunbitislbl.TabIndex = 6;
+            this.oyunbitislbl.Click += new System.EventHandler(this.oyunbitislbl_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -413,5 +428,6 @@ namespace NDPProje
         private System.Windows.Forms.Label scorelbl;
         public System.Windows.Forms.Panel oyunPanel;
         private System.Windows.Forms.PictureBox giftbox;
+        private System.Windows.Forms.Label oyunbitislbl;
     }
 }

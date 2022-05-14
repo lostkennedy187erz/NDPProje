@@ -19,8 +19,9 @@ namespace NDPProje
         public int tekerpuan;
         public int motorpuan;
         public int benzinpuan;
-        public int skor;
+        public int skor = 0;
         public int sureskor;
+        public int skorsayac = 0;
         private readonly Oyun _oyun;
         public Form2()
         {
@@ -35,8 +36,8 @@ namespace NDPProje
             label3.Text = Form1.urunAd; // form1 deki bilgiler form2 deki labellere aktarıldı.
             kalanurunlbl.Text = Form1.urunMiktari;
             kalansurelbl.Text = "120";
-            sure = Convert.ToInt32(kalansurelbl.Text);
-            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;
+            sure = Convert.ToInt32(kalansurelbl.Text);//süre kalan süre labelindeki değerin int değerini aldı.
+            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;//kalan süre çarpı üç skor.
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -52,8 +53,8 @@ namespace NDPProje
         {
             KalanSure.Stop();
             malzemeTimer.Stop();
-            skor = 4;
-            scorelbl.Text = ("Skor : " + skor.ToString()); // oyun bittiğinde ekran ortasında skor görünecek.
+            oyunbitislbl.Text = "Oyun Bitti...";
+            //scorelbl.Text = ("Skor : " + skor.ToString()); // oyun bittiğinde ekran ortasında skor görünecek.
         }
 
         private void Form2_KeyDown(object sender, KeyEventArgs e)
@@ -83,8 +84,11 @@ namespace NDPProje
 
         private void KalanSure_Tick(object sender, EventArgs e)
         {
+
             sure--;
             kalansurelbl.Text = Convert.ToString(sure);
+            skor = sureskor + skorsayac;
+            scorelbl.Text = ("Skor : " + skor.ToString());
             if (sure == 0) // süre 0 ise oyun sonlanır.
             {
                 Bitis();
@@ -156,11 +160,11 @@ namespace NDPProje
                 int sans = rnd.Next(1, 2); // yüzde 50 şans
                 if(sans == 1)
                 {
-                    skor += rnd.Next(200, 800);
+                    skorsayac += rnd.Next(200, 800);
                 }
-                else
+                else if(sans == 2)
                 {
-                    skor -= rnd.Next(200, 800);
+                    skorsayac += rnd.Next(200, 800) * -1;
                 }
                 giftbox.Top = rnd.Next(1000, 2000) * -1;
                 giftbox.Left = rnd.Next(oyunPanel.Width - giftbox.Width);
@@ -169,7 +173,7 @@ namespace NDPProje
             // malzeme ve kalan ürün işlemleri
             if(benzinpuan >= 1 && motorpuan >= 2 && tekerpuan >= 3)
             {
-                skor = skor + 100; //yapılan her ürün 100 puan.
+                skorsayac = skorsayac + 100; //yapılan her ürün 100 puan.
                 yapilanurun++;
                 yapılanurunlbl.Text = Convert.ToString(yapilanurun);
                 kalanurun--;
@@ -186,6 +190,9 @@ namespace NDPProje
             }
         }
 
+        private void oyunbitislbl_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
