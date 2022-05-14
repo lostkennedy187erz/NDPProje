@@ -31,7 +31,7 @@ namespace NDPProje
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.gösterge = new System.Windows.Forms.Panel();
+            this.gosterge = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -50,14 +50,15 @@ namespace NDPProje
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
+            this.scorelbl = new System.Windows.Forms.Label();
             this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.motorpicbox = new System.Windows.Forms.PictureBox();
             this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
             this.benzinpicbox = new System.Windows.Forms.PictureBox();
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
-            this.scorelbl = new System.Windows.Forms.Label();
-            this.gösterge.SuspendLayout();
+            this.giftbox = new System.Windows.Forms.PictureBox();
+            this.gosterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,33 +67,34 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftbox)).BeginInit();
             this.SuspendLayout();
             // 
-            // gösterge
+            // gosterge
             // 
-            this.gösterge.BackColor = System.Drawing.Color.SkyBlue;
-            this.gösterge.Controls.Add(this.label14);
-            this.gösterge.Controls.Add(this.label13);
-            this.gösterge.Controls.Add(this.label12);
-            this.gösterge.Controls.Add(this.label10);
-            this.gösterge.Controls.Add(this.label11);
-            this.gösterge.Controls.Add(this.label9);
-            this.gösterge.Controls.Add(this.label8);
-            this.gösterge.Controls.Add(this.kalansurelbl);
-            this.gösterge.Controls.Add(this.gostergeteker);
-            this.gösterge.Controls.Add(this.gostergemotor);
-            this.gösterge.Controls.Add(this.gostergebenzin);
-            this.gösterge.Controls.Add(this.pictureBox2);
-            this.gösterge.Controls.Add(this.pictureBox3);
-            this.gösterge.Controls.Add(this.label3);
-            this.gösterge.Controls.Add(this.label2);
-            this.gösterge.Controls.Add(this.pictureBox1);
-            this.gösterge.Controls.Add(this.label1);
-            this.gösterge.Dock = System.Windows.Forms.DockStyle.Right;
-            this.gösterge.Location = new System.Drawing.Point(788, 0);
-            this.gösterge.Name = "gösterge";
-            this.gösterge.Size = new System.Drawing.Size(239, 720);
-            this.gösterge.TabIndex = 0;
+            this.gosterge.BackColor = System.Drawing.Color.SkyBlue;
+            this.gosterge.Controls.Add(this.label14);
+            this.gosterge.Controls.Add(this.label13);
+            this.gosterge.Controls.Add(this.label12);
+            this.gosterge.Controls.Add(this.label10);
+            this.gosterge.Controls.Add(this.label11);
+            this.gosterge.Controls.Add(this.label9);
+            this.gosterge.Controls.Add(this.label8);
+            this.gosterge.Controls.Add(this.kalansurelbl);
+            this.gosterge.Controls.Add(this.gostergeteker);
+            this.gosterge.Controls.Add(this.gostergemotor);
+            this.gosterge.Controls.Add(this.gostergebenzin);
+            this.gosterge.Controls.Add(this.pictureBox2);
+            this.gosterge.Controls.Add(this.pictureBox3);
+            this.gosterge.Controls.Add(this.label3);
+            this.gosterge.Controls.Add(this.label2);
+            this.gosterge.Controls.Add(this.pictureBox1);
+            this.gosterge.Controls.Add(this.label1);
+            this.gosterge.Dock = System.Windows.Forms.DockStyle.Right;
+            this.gosterge.Location = new System.Drawing.Point(788, 0);
+            this.gosterge.Name = "gosterge";
+            this.gosterge.Size = new System.Drawing.Size(239, 720);
+            this.gosterge.TabIndex = 0;
             // 
             // label14
             // 
@@ -268,8 +270,9 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
-            this.oyunPanel.Controls.Add(this.scorelbl);
             this.oyunPanel.Controls.Add(this.arabapicbox);
+            this.oyunPanel.Controls.Add(this.giftbox);
+            this.oyunPanel.Controls.Add(this.scorelbl);
             this.oyunPanel.Controls.Add(this.motorpicbox);
             this.oyunPanel.Controls.Add(this.tekerlekpicbox);
             this.oyunPanel.Controls.Add(this.benzinpicbox);
@@ -279,6 +282,16 @@ namespace NDPProje
             this.oyunPanel.Size = new System.Drawing.Size(789, 720);
             this.oyunPanel.TabIndex = 1;
             this.oyunPanel.Tag = "";
+            // 
+            // scorelbl
+            // 
+            this.scorelbl.AutoSize = true;
+            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.scorelbl.Location = new System.Drawing.Point(315, 329);
+            this.scorelbl.Name = "scorelbl";
+            this.scorelbl.Size = new System.Drawing.Size(0, 55);
+            this.scorelbl.TabIndex = 4;
+            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // arabapicbox
             // 
@@ -333,15 +346,15 @@ namespace NDPProje
             this.malzemeTimer.Interval = 20;
             this.malzemeTimer.Tick += new System.EventHandler(this.malzemeTimer_Tick);
             // 
-            // scorelbl
+            // giftbox
             // 
-            this.scorelbl.AutoSize = true;
-            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.scorelbl.Location = new System.Drawing.Point(315, 329);
-            this.scorelbl.Name = "scorelbl";
-            this.scorelbl.Size = new System.Drawing.Size(0, 55);
-            this.scorelbl.TabIndex = 4;
-            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.giftbox.Image = ((System.Drawing.Image)(resources.GetObject("giftbox.Image")));
+            this.giftbox.Location = new System.Drawing.Point(552, 27);
+            this.giftbox.Name = "giftbox";
+            this.giftbox.Size = new System.Drawing.Size(64, 64);
+            this.giftbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.giftbox.TabIndex = 5;
+            this.giftbox.TabStop = false;
             // 
             // Form2
             // 
@@ -349,14 +362,14 @@ namespace NDPProje
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1027, 720);
             this.Controls.Add(this.oyunPanel);
-            this.Controls.Add(this.gösterge);
+            this.Controls.Add(this.gosterge);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "ZGarage";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
-            this.gösterge.ResumeLayout(false);
-            this.gösterge.PerformLayout();
+            this.gosterge.ResumeLayout(false);
+            this.gosterge.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -366,13 +379,14 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftbox)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel gösterge;
+        private System.Windows.Forms.Panel gosterge;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -387,7 +401,6 @@ namespace NDPProje
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label kalansurelbl;
-        private System.Windows.Forms.Panel oyunPanel;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -398,5 +411,7 @@ namespace NDPProje
         private System.Windows.Forms.PictureBox benzinpicbox;
         private System.Windows.Forms.Timer malzemeTimer;
         private System.Windows.Forms.Label scorelbl;
+        public System.Windows.Forms.Panel oyunPanel;
+        private System.Windows.Forms.PictureBox giftbox;
     }
 }

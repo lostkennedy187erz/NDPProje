@@ -33,24 +33,26 @@ namespace NDPProje
             benzinpicbox.Top = rnd.Next(1,200) * -1;
             tekerlekpicbox.Top = rnd.Next(1, 500) * -1;
             motorpicbox.Top = rnd.Next(1, 700) * -1;
+            giftbox.Top = rnd.Next(500, 1000) * -1;
             _oyun = new Oyun(oyunPanel);
             label2.Text = Form1.adSoyad;
             label3.Text = Form1.urunAd;
             label11.Text = Form1.urunMiktari;
             kalansurelbl.Text = "120";
             sure = Convert.ToInt32(kalansurelbl.Text);
+            
 
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             Basla();
-            Topla();
         }
         public void Basla()
         {
             KalanSure.Start();
             malzemeTimer.Start();
+            Topla();
         }
         public void Bitis()
         {
@@ -86,20 +88,32 @@ namespace NDPProje
 
         private void KalanSure_Tick(object sender, EventArgs e)
         {
-            sure = sure - 1;
+            sure--;
             kalansurelbl.Text = Convert.ToString(sure);
-            foreach (Control x in this.Controls)
+            if (sure == 0)
             {
-                if (x is PictureBox && (string)x.Tag == "malzeme")
-                {
-                    x.Top = rnd.Next(40, 200) * -1;
-                    x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
-                }
-                if (x.Bounds.IntersectsWith(arabapicbox.Bounds))
-                {
-                    x.Top = rnd.Next(40, 200) * -1;
-                    x.Left = rnd.Next(5, this.ClientSize.Width - x.Width);
-                }
+                Bitis();
+            }
+
+            if (tekerlekpicbox.Top > oyunPanel.Height)
+        {
+            tekerlekpicbox.Top = rnd.Next(1, 100) * -1;
+            tekerlekpicbox.Left = rnd.Next(oyunPanel.Width - tekerlekpicbox.Width); 
+        }
+        else if(benzinpicbox.Top > oyunPanel.Height)
+        {
+            benzinpicbox.Top = rnd.Next(1, 130) * -1;
+            benzinpicbox.Left = rnd.Next(oyunPanel.Width - benzinpicbox.Width);
+        }
+        else if (motorpicbox.Top > oyunPanel.Height)
+        {
+            motorpicbox.Top = rnd.Next(1, 300) * -1;
+            motorpicbox.Left = rnd.Next(oyunPanel.Width - motorpicbox.Width);
+        }
+        else if(giftbox.Top > oyunPanel.Height)
+            {
+                giftbox.Top = rnd.Next(1000, 2000) * -1;
+                giftbox.Left = rnd.Next(oyunPanel.Width - giftbox.Width);
             }
             gostergebenzin.Text = benzinpuan.ToString();
             gostergemotor.Text = motorpuan.ToString();
@@ -111,6 +125,7 @@ namespace NDPProje
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
             motorpicbox.Top += malzemeHiz;
+            giftbox.Top += malzemeHiz;
             
         }
         public void Topla()
@@ -136,22 +151,22 @@ namespace NDPProje
                 motorpicbox.Top = rnd.Next(1, 500) * -1;
                 motorpicbox.Left = rnd.Next(20, 700);
             }
-
-            if (tekerlekpicbox.Top > 790)
+            /*
+            else if (tekerlekpicbox.Top > oyunPanel.Height)
             {
                 tekerlekpicbox.Top = rnd.Next(1, 200) * -1;
-                tekerlekpicbox.Left = rnd.Next(oyunPanel.Width);
+                tekerlekpicbox.Left = rnd.Next(20,700); 
             }
-            else if(benzinpicbox.Top > 790)
+            else if(benzinpicbox.Top > oyunPanel.Height)
             {
                 benzinpicbox.Top = rnd.Next(1, 700) * -1;
                 benzinpicbox.Left = rnd.Next(20, 700);
             }
-            else if (motorpicbox.Top > 790)
+            else if (motorpicbox.Top > oyunPanel.Height)
             {
                 motorpicbox.Top = rnd.Next(1, 500) * -1;
                 motorpicbox.Left = rnd.Next(20, 700);
-            }
+            }*/
         }
 
 
