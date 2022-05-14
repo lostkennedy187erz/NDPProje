@@ -287,7 +287,7 @@ namespace NDPProje
             // 
             this.scorelbl.AutoSize = true;
             this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.scorelbl.Location = new System.Drawing.Point(315, 329);
+            this.scorelbl.Location = new System.Drawing.Point(252, 287);
             this.scorelbl.Name = "scorelbl";
             this.scorelbl.Size = new System.Drawing.Size(0, 55);
             this.scorelbl.TabIndex = 4;

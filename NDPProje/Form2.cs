@@ -3,17 +3,9 @@
 //Bölüm : BİLİŞİM SİSTEMLERİ MÜHENDİSLİĞİ
 
 using System;
-using ProjeLibrary;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ProjeLibrary.Somut;
-using ProjeLibrary.Enum;
 
 namespace NDPProje
 {
@@ -22,14 +14,18 @@ namespace NDPProje
         public int sure;
         int malzemeHiz = 6;
         Random rnd = new Random();
+        public int kalanurun = 5;
+        public int yapilanurun = 0;
         public int tekerpuan;
         public int motorpuan;
         public int benzinpuan;
         public int skor;
+        public int sureskor;
         private readonly Oyun _oyun;
         public Form2()
         {
             InitializeComponent();
+            //ilk sefenrlik konumlar atandı
             benzinpicbox.Top = rnd.Next(1,200) * -1;
             tekerlekpicbox.Top = rnd.Next(1, 500) * -1;
             motorpicbox.Top = rnd.Next(1, 700) * -1;
@@ -40,8 +36,7 @@ namespace NDPProje
             kalanurunlbl.Text = Form1.urunMiktari;
             kalansurelbl.Text = "120";
             sure = Convert.ToInt32(kalansurelbl.Text);
-            
-
+            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -57,8 +52,8 @@ namespace NDPProje
         {
             KalanSure.Stop();
             malzemeTimer.Stop();
-            skor = Convert.ToInt32(kalansurelbl.Text) * 3;
-            scorelbl.Text = ("Skor : " + skor.ToString());
+            skor = 4;
+            scorelbl.Text = ("Skor : " + skor.ToString()); // oyun bittiğinde ekran ortasında skor görünecek.
         }
 
         private void Form2_KeyDown(object sender, KeyEventArgs e)
@@ -124,7 +119,7 @@ namespace NDPProje
 
         private void malzemeTimer_Tick(object sender, EventArgs e)
         {
-            //malzemelere özgü zaman.
+            //malzemelere özgü zaman Ve hızlanma.
             Topla();
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
@@ -134,6 +129,7 @@ namespace NDPProje
         }
         public void Topla()
         {
+            //malzemeler arabaya değdiği gibi sayaçlar çalışcak ve malzemeler tekrardan konumlanacak.
             if (tekerlekpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 tekerpuan += 1;
@@ -157,7 +153,7 @@ namespace NDPProje
             }
             else if (giftbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
-                int sans = rnd.Next(1, 2);
+                int sans = rnd.Next(1, 2); // yüzde 50 şans
                 if(sans == 1)
                 {
                     skor += rnd.Next(200, 800);
@@ -173,9 +169,20 @@ namespace NDPProje
             // malzeme ve kalan ürün işlemleri
             if(benzinpuan >= 1 && motorpuan >= 2 && tekerpuan >= 3)
             {
-                int kalanurun = 5;
+                skor = skor + 100; //yapılan her ürün 100 puan.
+                yapilanurun++;
+                yapılanurunlbl.Text = Convert.ToString(yapilanurun);
                 kalanurun--;
                 kalanurunlbl.Text = kalanurun.ToString();
+                //her 1 ürün üretildiğinde, 1 ürünlük malzemeler(benzin,motor,tekerlek) göstergeden gerektiği kadar azaltılacaktır.
+                //kullanıcı daha iyi oyun anlık bilgisini alması ve gereken malzemeyi hesaplaması için
+                benzinpuan--;
+                motorpuan = motorpuan - 2;
+                tekerpuan = tekerpuan - 3;
+                if(kalanurun == 0)
+                {
+                    Bitis();
+                }
             }
         }
 
