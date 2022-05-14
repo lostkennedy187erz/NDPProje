@@ -34,6 +34,7 @@ namespace NDPProje
             _oyun = new Oyun(oyunPanel);
             label2.Text = Form1.adSoyad;
             label3.Text = Form1.urunAd; // form1 deki bilgiler form2 deki labellere aktarıldı.
+            exitbtn.Visible = false;
             kalanurunlbl.Text = Form1.urunMiktari;
             kalansurelbl.Text = "120";
             sure = Convert.ToInt32(kalansurelbl.Text);//süre kalan süre labelindeki değerin int değerini aldı.
@@ -54,6 +55,7 @@ namespace NDPProje
             KalanSure.Stop();
             malzemeTimer.Stop();
             oyunbitislbl.Text = "Oyun Bitti...";
+            exitbtn.Visible = true;
             //scorelbl.Text = ("Skor : " + skor.ToString()); // oyun bittiğinde ekran ortasında skor görünecek.
         }
 
@@ -87,9 +89,9 @@ namespace NDPProje
 
             sure--;
             kalansurelbl.Text = Convert.ToString(sure);
-            skor = sureskor + skorsayac;
+            skor = skorsayac;
             scorelbl.Text = ("Skor : " + skor.ToString());
-            if (sure == 0) // süre 0 ise oyun sonlanır.
+            if (sure == 110) // süre 0 ise oyun sonlanır.
             {
                 Bitis();
             }
@@ -157,14 +159,14 @@ namespace NDPProje
             }
             else if (giftbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
-                int sans = rnd.Next(1, 2); // yüzde 50 şans
+                int sans = rnd.Next(1, 3); // yüzde 50 şans
                 if(sans == 1)
                 {
-                    skorsayac += rnd.Next(200, 800);
+                    skorsayac += rnd.Next(1, 100);
                 }
                 else if(sans == 2)
                 {
-                    skorsayac += rnd.Next(200, 800) * -1;
+                    skorsayac += rnd.Next(1, 100) * -1;
                 }
                 giftbox.Top = rnd.Next(1000, 2000) * -1;
                 giftbox.Left = rnd.Next(oyunPanel.Width - giftbox.Width);
@@ -185,14 +187,15 @@ namespace NDPProje
                 tekerpuan = tekerpuan - 3;
                 if(kalanurun == 0)
                 {
+                    skor += sureskor;
                     Bitis();
                 }
             }
         }
 
-        private void oyunbitislbl_Click(object sender, EventArgs e)
+        private void exitbtn_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

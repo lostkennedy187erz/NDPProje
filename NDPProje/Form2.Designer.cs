@@ -34,6 +34,7 @@ namespace NDPProje
             this.gosterge = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.scorelbl = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.yapılanurunlbl = new System.Windows.Forms.Label();
             this.kalanurunlbl = new System.Windows.Forms.Label();
@@ -50,25 +51,25 @@ namespace NDPProje
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
-            this.scorelbl = new System.Windows.Forms.Label();
+            this.oyunbitislbl = new System.Windows.Forms.Label();
             this.arabapicbox = new System.Windows.Forms.PictureBox();
+            this.giftbox = new System.Windows.Forms.PictureBox();
             this.motorpicbox = new System.Windows.Forms.PictureBox();
             this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
             this.benzinpicbox = new System.Windows.Forms.PictureBox();
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
-            this.giftbox = new System.Windows.Forms.PictureBox();
-            this.oyunbitislbl = new System.Windows.Forms.Label();
+            this.exitbtn = new System.Windows.Forms.Button();
             this.gosterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.oyunPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giftbox)).BeginInit();
             this.SuspendLayout();
             // 
             // gosterge
@@ -117,6 +118,18 @@ namespace NDPProje
             this.label13.Size = new System.Drawing.Size(14, 13);
             this.label13.TabIndex = 11;
             this.label13.Text = "2";
+            // 
+            // scorelbl
+            // 
+            this.scorelbl.BackColor = System.Drawing.Color.Transparent;
+            this.scorelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.scorelbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scorelbl.Location = new System.Drawing.Point(7, 140);
+            this.scorelbl.Name = "scorelbl";
+            this.scorelbl.Size = new System.Drawing.Size(227, 55);
+            this.scorelbl.TabIndex = 4;
+            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label12
             // 
@@ -273,11 +286,12 @@ namespace NDPProje
             // oyunPanel
             // 
             this.oyunPanel.Controls.Add(this.oyunbitislbl);
-            this.oyunPanel.Controls.Add(this.arabapicbox);
             this.oyunPanel.Controls.Add(this.giftbox);
             this.oyunPanel.Controls.Add(this.motorpicbox);
             this.oyunPanel.Controls.Add(this.tekerlekpicbox);
             this.oyunPanel.Controls.Add(this.benzinpicbox);
+            this.oyunPanel.Controls.Add(this.exitbtn);
+            this.oyunPanel.Controls.Add(this.arabapicbox);
             this.oyunPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.oyunPanel.Location = new System.Drawing.Point(0, 0);
             this.oyunPanel.Name = "oyunPanel";
@@ -285,17 +299,15 @@ namespace NDPProje
             this.oyunPanel.TabIndex = 1;
             this.oyunPanel.Tag = "";
             // 
-            // scorelbl
+            // oyunbitislbl
             // 
-            this.scorelbl.BackColor = System.Drawing.Color.Transparent;
-            this.scorelbl.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.scorelbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.scorelbl.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.scorelbl.Location = new System.Drawing.Point(7, 140);
-            this.scorelbl.Name = "scorelbl";
-            this.scorelbl.Size = new System.Drawing.Size(227, 55);
-            this.scorelbl.TabIndex = 4;
-            this.scorelbl.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.oyunbitislbl.AutoSize = true;
+            this.oyunbitislbl.BackColor = System.Drawing.Color.Transparent;
+            this.oyunbitislbl.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.oyunbitislbl.Location = new System.Drawing.Point(245, 329);
+            this.oyunbitislbl.Name = "oyunbitislbl";
+            this.oyunbitislbl.Size = new System.Drawing.Size(0, 42);
+            this.oyunbitislbl.TabIndex = 6;
             // 
             // arabapicbox
             // 
@@ -306,6 +318,16 @@ namespace NDPProje
             this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.arabapicbox.TabIndex = 0;
             this.arabapicbox.TabStop = false;
+            // 
+            // giftbox
+            // 
+            this.giftbox.Image = ((System.Drawing.Image)(resources.GetObject("giftbox.Image")));
+            this.giftbox.Location = new System.Drawing.Point(552, 27);
+            this.giftbox.Name = "giftbox";
+            this.giftbox.Size = new System.Drawing.Size(64, 64);
+            this.giftbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.giftbox.TabIndex = 5;
+            this.giftbox.TabStop = false;
             // 
             // motorpicbox
             // 
@@ -350,26 +372,16 @@ namespace NDPProje
             this.malzemeTimer.Interval = 20;
             this.malzemeTimer.Tick += new System.EventHandler(this.malzemeTimer_Tick);
             // 
-            // giftbox
+            // exitbtn
             // 
-            this.giftbox.Image = ((System.Drawing.Image)(resources.GetObject("giftbox.Image")));
-            this.giftbox.Location = new System.Drawing.Point(552, 27);
-            this.giftbox.Name = "giftbox";
-            this.giftbox.Size = new System.Drawing.Size(64, 64);
-            this.giftbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.giftbox.TabIndex = 5;
-            this.giftbox.TabStop = false;
-            // 
-            // oyunbitislbl
-            // 
-            this.oyunbitislbl.AutoSize = true;
-            this.oyunbitislbl.BackColor = System.Drawing.Color.Transparent;
-            this.oyunbitislbl.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.oyunbitislbl.Location = new System.Drawing.Point(246, 329);
-            this.oyunbitislbl.Name = "oyunbitislbl";
-            this.oyunbitislbl.Size = new System.Drawing.Size(0, 43);
-            this.oyunbitislbl.TabIndex = 6;
-            this.oyunbitislbl.Click += new System.EventHandler(this.oyunbitislbl_Click);
+            this.exitbtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitbtn.Location = new System.Drawing.Point(314, 399);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.Size = new System.Drawing.Size(102, 55);
+            this.exitbtn.TabIndex = 8;
+            this.exitbtn.Text = "Exıt";
+            this.exitbtn.UseVisualStyleBackColor = true;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // Form2
             // 
@@ -391,10 +403,10 @@ namespace NDPProje
             this.oyunPanel.ResumeLayout(false);
             this.oyunPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giftbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giftbox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,5 +441,6 @@ namespace NDPProje
         public System.Windows.Forms.Panel oyunPanel;
         private System.Windows.Forms.PictureBox giftbox;
         private System.Windows.Forms.Label oyunbitislbl;
+        private System.Windows.Forms.Button exitbtn;
     }
 }
