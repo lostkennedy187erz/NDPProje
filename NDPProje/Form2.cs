@@ -76,11 +76,11 @@ namespace NDPProje
             int yatay = arabapicbox.Location.X;
             if(e.KeyCode==Keys.Left && arabapicbox.Left > 15)
             {
-                yatay -= 40;
+                yatay -= 50;
             }
             if (e.KeyCode == Keys.Right && arabapicbox.Width + arabapicbox.Left <570)
             {
-                yatay += 40;
+                yatay += 50;
             }
             arabapicbox.Location = new Point(yatay,530); //yatay eksende yer değiştirir ama düşey eksende sabittir.
 
@@ -140,21 +140,36 @@ namespace NDPProje
             {
                 skor += sureskor; // oyun ürünler toplam ürün toplandığında kalan süre puanını, ana puana ekler.
             }
-            scorelbl.Text = ("Skor : " + skor.ToString());
+            scorelbl.Text = ("Skor : " + skor.ToString()); //güncel skor bilgisini yansıtma.
+
             if(kalansurelbl.Text == "100")
             {
-                malzemeTimer.Interval = 15; //saniye 80e kadar 2 kez hızlanma.
+                malzemeHiz = 9; //her 20 saniyede +3 hız.
             }
             if(kalansurelbl.Text == "80")
             {
-                malzemeTimer.Interval = 5;
+                malzemeHiz = 12;
             }
+            if(kalansurelbl.Text == "60")
+            {
+                malzemeHiz = 15;
+            }
+            if(kalansurelbl.Text == "40")
+            {
+                malzemeHiz = 18;
+            }
+            if(kalansurelbl.Text == "20")
+            {
+                malzemeHiz = 21;
+            }
+
             //nesneler aşağıya düşsün diye += operatörü kullanıldı.
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
             motorpicbox.Top += malzemeHiz;
             giftbox.Top += malzemeHiz;
 
+            //eşzamanlı güncel gösterge bilgileri.
             gostergebenzin.Text = benzinpuan.ToString();
             gostergemotor.Text = motorpuan.ToString();
             gostergeteker.Text = tekerpuan.ToString();
@@ -210,8 +225,8 @@ namespace NDPProje
                 //her 1 ürün üretildiğinde, 1 ürünlük malzemeler(benzin,motor,tekerlek) göstergeden gerektiği kadar azaltılacaktır.
                 //kullanıcı daha iyi oyun anlık bilgisini alması ve gereken malzemeyi hesaplaması için
                 benzinpuan--;
-                motorpuan = motorpuan - 2;
-                tekerpuan = tekerpuan - 3;
+                motorpuan -= 2;
+                tekerpuan -= 3;
 
                 if (kalanurun == 0)
                 {

@@ -49,10 +49,10 @@ namespace NDPProje
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.isimbox = new System.Windows.Forms.TextBox();
+            this.soyadbox = new System.Windows.Forms.TextBox();
+            this.urunbox = new System.Windows.Forms.TextBox();
+            this.urunmiktarbox = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -263,51 +263,51 @@ namespace NDPProje
             this.textBox1.Text = "67";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // isimbox
             // 
-            this.textBox2.BackColor = System.Drawing.Color.DarkBlue;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(324, 85);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(231, 30);
-            this.textBox2.TabIndex = 18;
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.isimbox.BackColor = System.Drawing.Color.DarkBlue;
+            this.isimbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.isimbox.ForeColor = System.Drawing.Color.White;
+            this.isimbox.Location = new System.Drawing.Point(324, 85);
+            this.isimbox.Name = "isimbox";
+            this.isimbox.Size = new System.Drawing.Size(231, 30);
+            this.isimbox.TabIndex = 18;
+            this.isimbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // soyadbox
             // 
-            this.textBox3.BackColor = System.Drawing.Color.DarkBlue;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(324, 131);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(231, 30);
-            this.textBox3.TabIndex = 19;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.soyadbox.BackColor = System.Drawing.Color.DarkBlue;
+            this.soyadbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.soyadbox.ForeColor = System.Drawing.Color.White;
+            this.soyadbox.Location = new System.Drawing.Point(324, 131);
+            this.soyadbox.Name = "soyadbox";
+            this.soyadbox.Size = new System.Drawing.Size(231, 30);
+            this.soyadbox.TabIndex = 19;
+            this.soyadbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // urunbox
             // 
-            this.textBox4.BackColor = System.Drawing.Color.DarkBlue;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(324, 177);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(231, 30);
-            this.textBox4.TabIndex = 20;
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.urunbox.BackColor = System.Drawing.Color.DarkBlue;
+            this.urunbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.urunbox.ForeColor = System.Drawing.Color.White;
+            this.urunbox.Location = new System.Drawing.Point(324, 177);
+            this.urunbox.Name = "urunbox";
+            this.urunbox.Size = new System.Drawing.Size(231, 30);
+            this.urunbox.TabIndex = 20;
+            this.urunbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // urunmiktarbox
             // 
-            this.textBox5.BackColor = System.Drawing.Color.DarkBlue;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox5.ForeColor = System.Drawing.Color.White;
-            this.textBox5.Location = new System.Drawing.Point(324, 224);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ReadOnly = true;
-            this.textBox5.Size = new System.Drawing.Size(231, 30);
-            this.textBox5.TabIndex = 21;
-            this.textBox5.Text = "5";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.urunmiktarbox.BackColor = System.Drawing.Color.DarkBlue;
+            this.urunmiktarbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.urunmiktarbox.ForeColor = System.Drawing.Color.White;
+            this.urunmiktarbox.Location = new System.Drawing.Point(324, 224);
+            this.urunmiktarbox.Name = "urunmiktarbox";
+            this.urunmiktarbox.ReadOnly = true;
+            this.urunmiktarbox.Size = new System.Drawing.Size(231, 30);
+            this.urunmiktarbox.TabIndex = 21;
+            this.urunmiktarbox.Text = "5";
+            this.urunmiktarbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox6
             // 
@@ -329,13 +329,13 @@ namespace NDPProje
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.textBox6);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.textBox5);
+            this.panel2.Controls.Add(this.urunmiktarbox);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.textBox4);
+            this.panel2.Controls.Add(this.urunbox);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.soyadbox);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.isimbox);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Location = new System.Drawing.Point(396, 73);
@@ -412,13 +412,13 @@ namespace NDPProje
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox urunbox;
+        private System.Windows.Forms.TextBox urunmiktarbox;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        public System.Windows.Forms.TextBox textBox2;
-        public System.Windows.Forms.TextBox textBox3;
+        public System.Windows.Forms.TextBox isimbox;
+        public System.Windows.Forms.TextBox soyadbox;
     }
 }
 

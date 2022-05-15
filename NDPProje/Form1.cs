@@ -21,7 +21,8 @@ namespace NDPProje
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
                 "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.\nSüre bittiğinde oyun sona erer." +
-                "\nHer seferinde toplamda 5 ürün toplanmalıdır.\nHer bir ürün 100 puandır.\nEkstra malzeme puan kazandırmaz." +
+                "\nHer seferinde toplamda 5 ürün toplanmalıdır.\nHer 20 saniyede bir oyun hızlanacaktır" +
+                "\nHer bir ürün 100 puandır.\nEkstra malzeme puan kazandırmaz." +
                 "\nÜrün toplaması bittiğinde kalan süre 3 ile çarpılıp skora eklenir.\nHediye kutuları size (1,100) arası puan kazandıracaktır veya kaybettirecektir.");
         }
 
@@ -29,15 +30,17 @@ namespace NDPProje
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
                 "\nOyunu duraklatmak için P, devam etmek için S tuşunu kullanınız.\nSüre bittiğinde oyun sona erer." +
-                "\nHer seferinde toplamda 5 ürün toplanmalıdır.\nHer bir ürün 100 puandır.\nEkstra malzeme puan kazandırmaz." +
+                "\nHer seferinde toplamda 5 ürün toplanmalıdır.\nHer 20 saniyede bir oyun hızlanacaktır" +
+                "\nHer bir ürün 100 puandır.\nEkstra malzeme puan kazandırmaz." +
                 "\nÜrün toplaması bittiğinde kalan süre 3 ile çarpılıp skora eklenir.\nHediye kutuları size (1,100) arası puan kazandıracaktır veya kaybettirecektir.");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            adSoyad = textBox2.Text + " " + textBox3.Text;
-            urunAd = textBox4.Text;
-            urunMiktari = textBox5.Text;
+            //BASLA BUTONU
+            adSoyad = isimbox.Text + " " + soyadbox.Text;
+            urunAd = urunbox.Text;
+            urunMiktari = urunmiktarbox.Text;
             Form2 fm2 = new Form2(); //oyun ekranına geçiş için
             fm2.Show();
             Visible = false; // oyun ekranı açıldığında giriş ekranının görünmemesi için.
