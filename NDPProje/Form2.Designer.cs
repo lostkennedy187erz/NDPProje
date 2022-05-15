@@ -52,24 +52,24 @@ namespace NDPProje
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
             this.oyunbitislbl = new System.Windows.Forms.Label();
-            this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.giftbox = new System.Windows.Forms.PictureBox();
             this.motorpicbox = new System.Windows.Forms.PictureBox();
             this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
             this.benzinpicbox = new System.Windows.Forms.PictureBox();
+            this.exitbtn = new System.Windows.Forms.Button();
+            this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
-            this.exitbtn = new System.Windows.Forms.Button();
             this.gosterge.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.oyunPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).BeginInit();
             this.SuspendLayout();
             // 
             // gosterge
@@ -285,12 +285,12 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
+            this.oyunPanel.Controls.Add(this.exitbtn);
             this.oyunPanel.Controls.Add(this.oyunbitislbl);
             this.oyunPanel.Controls.Add(this.giftbox);
             this.oyunPanel.Controls.Add(this.motorpicbox);
             this.oyunPanel.Controls.Add(this.tekerlekpicbox);
             this.oyunPanel.Controls.Add(this.benzinpicbox);
-            this.oyunPanel.Controls.Add(this.exitbtn);
             this.oyunPanel.Controls.Add(this.arabapicbox);
             this.oyunPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.oyunPanel.Location = new System.Drawing.Point(0, 0);
@@ -308,16 +308,6 @@ namespace NDPProje
             this.oyunbitislbl.Name = "oyunbitislbl";
             this.oyunbitislbl.Size = new System.Drawing.Size(0, 42);
             this.oyunbitislbl.TabIndex = 6;
-            // 
-            // arabapicbox
-            // 
-            this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
-            this.arabapicbox.Location = new System.Drawing.Point(375, 656);
-            this.arabapicbox.Name = "arabapicbox";
-            this.arabapicbox.Size = new System.Drawing.Size(64, 64);
-            this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.arabapicbox.TabIndex = 0;
-            this.arabapicbox.TabStop = false;
             // 
             // giftbox
             // 
@@ -362,16 +352,6 @@ namespace NDPProje
             this.benzinpicbox.TabStop = false;
             this.benzinpicbox.Tag = "malzeme";
             // 
-            // KalanSure
-            // 
-            this.KalanSure.Interval = 1000;
-            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
-            // 
-            // malzemeTimer
-            // 
-            this.malzemeTimer.Interval = 20;
-            this.malzemeTimer.Tick += new System.EventHandler(this.malzemeTimer_Tick);
-            // 
             // exitbtn
             // 
             this.exitbtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,6 +362,26 @@ namespace NDPProje
             this.exitbtn.Text = "Exıt";
             this.exitbtn.UseVisualStyleBackColor = true;
             this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
+            // 
+            // arabapicbox
+            // 
+            this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
+            this.arabapicbox.Location = new System.Drawing.Point(375, 656);
+            this.arabapicbox.Name = "arabapicbox";
+            this.arabapicbox.Size = new System.Drawing.Size(64, 64);
+            this.arabapicbox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.arabapicbox.TabIndex = 0;
+            this.arabapicbox.TabStop = false;
+            // 
+            // KalanSure
+            // 
+            this.KalanSure.Interval = 1000;
+            this.KalanSure.Tick += new System.EventHandler(this.KalanSure_Tick);
+            // 
+            // malzemeTimer
+            // 
+            this.malzemeTimer.Interval = 20;
+            this.malzemeTimer.Tick += new System.EventHandler(this.malzemeTimer_Tick);
             // 
             // Form2
             // 
@@ -402,11 +402,11 @@ namespace NDPProje
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.oyunPanel.ResumeLayout(false);
             this.oyunPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giftbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.motorpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tekerlekpicbox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.benzinpicbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arabapicbox)).EndInit();
             this.ResumeLayout(false);
 
         }

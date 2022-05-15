@@ -38,7 +38,7 @@ namespace NDPProje
             kalanurunlbl.Text = Form1.urunMiktari;
             kalansurelbl.Text = "120";
             sure = Convert.ToInt32(kalansurelbl.Text);//süre kalan süre labelindeki değerin int değerini aldı.
-            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;//kalan süre çarpı üç skor.
+            //kalan süre çarpı üç skor.
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -52,9 +52,9 @@ namespace NDPProje
         }
         public void Bitis()
         {
+            skor += sureskor;
             KalanSure.Stop();
             malzemeTimer.Stop();
-            skor += sureskor;
             oyunbitislbl.Text = "Oyun Bitti...";
             exitbtn.Visible = true;
             //scorelbl.Text = ("Skor : " + skor.ToString()); // oyun bittiğinde ekran ortasında skor görünecek.
@@ -65,11 +65,11 @@ namespace NDPProje
             int yatay = arabapicbox.Location.X;
             if(e.KeyCode==Keys.Left && arabapicbox.Left > 15)
             {
-                yatay -= 35;
+                yatay -= 40;
             }
             if (e.KeyCode == Keys.Right && arabapicbox.Width + arabapicbox.Left <570)
             {
-                yatay += 35;
+                yatay += 40;
             }
             arabapicbox.Location = new Point(yatay,530); //yatay eksende yer değiştirir ama düşey eksende sabittir.
 
@@ -87,11 +87,8 @@ namespace NDPProje
 
         private void KalanSure_Tick(object sender, EventArgs e)
         {
-
             sure--;
             kalansurelbl.Text = Convert.ToString(sure);
-            skor = skorsayac;
-            scorelbl.Text = ("Skor : " + skor.ToString());
             if (sure == 0) // süre 0 ise oyun sonlanır.
             {
                 Bitis();
@@ -124,10 +121,13 @@ namespace NDPProje
             gostergeteker.Text = tekerpuan.ToString();
         }
 
+
         private void malzemeTimer_Tick(object sender, EventArgs e)
         {
             //malzemelere özgü zaman Ve hızlanma.
             Topla();
+            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;
+            scorelbl.Text = ("Skor : " + skor.ToString());
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
             motorpicbox.Top += malzemeHiz;
@@ -176,7 +176,7 @@ namespace NDPProje
             // malzeme ve kalan ürün işlemleri
             if(benzinpuan >= 1 && motorpuan >= 2 && tekerpuan >= 3)
             {
-                skorsayac = skorsayac + 100; //yapılan her ürün 100 puan.
+                skorsayac += 100; //yapılan her ürün 100 puan.
                 yapilanurun++;
                 yapılanurunlbl.Text = Convert.ToString(yapilanurun);
                 kalanurun--;
@@ -186,7 +186,8 @@ namespace NDPProje
                 benzinpuan--;
                 motorpuan = motorpuan - 2;
                 tekerpuan = tekerpuan - 3;
-                if(kalanurun == 0)
+                skor = skorsayac; // her ürüne 100 puan eklenince skora yansıtıldı.
+                if (kalanurun == 0)
                 {
                     Bitis();
                 }
