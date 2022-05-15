@@ -213,7 +213,6 @@ namespace NDPProje
                 giftbox.Top = rnd.Next(1200, 2200) * -1;
                 giftbox.Left = rnd.Next(oyunPanel.Width - giftbox.Width);
             }
-
             // malzeme ve kalan ürün işlemleri
             if(benzinpuan >= 1 && motorpuan >= 2 && tekerpuan >= 3)
             {
