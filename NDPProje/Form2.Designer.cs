@@ -285,6 +285,7 @@ namespace NDPProje
             // 
             // oyunPanel
             // 
+            this.oyunPanel.BackColor = System.Drawing.Color.LemonChiffon;
             this.oyunPanel.Controls.Add(this.exitbtn);
             this.oyunPanel.Controls.Add(this.oyunbitislbl);
             this.oyunPanel.Controls.Add(this.giftbox);
