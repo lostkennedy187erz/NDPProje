@@ -16,7 +16,7 @@ namespace NDPProje
         }
         public static string adSoyad = ""; //form1den form2 ye data göndermek için üretilen değişkenler.
         public static string urunAd = "";
-        public static string urunMiktari = "";
+        public static int urunMiktari;
         private void label9_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hareket etmek için sağ ve sol yön tuşlarını kullanınız." +
@@ -40,7 +40,7 @@ namespace NDPProje
             //BASLA BUTONU
             adSoyad = isimbox.Text + " " + soyadbox.Text;
             urunAd = urunbox.Text;
-            urunMiktari = urunmiktarbox.Text;
+            urunMiktari = Convert.ToInt32(urunmiktarbox.Text);
             Form2 fm2 = new Form2(); //oyun ekranına geçiş için
             fm2.Show();
             Visible = false; // oyun ekranı açıldığında giriş ekranının görünmemesi için.

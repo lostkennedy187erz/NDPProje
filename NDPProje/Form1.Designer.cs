@@ -303,10 +303,8 @@ namespace NDPProje
             this.urunmiktarbox.ForeColor = System.Drawing.Color.White;
             this.urunmiktarbox.Location = new System.Drawing.Point(324, 224);
             this.urunmiktarbox.Name = "urunmiktarbox";
-            this.urunmiktarbox.ReadOnly = true;
             this.urunmiktarbox.Size = new System.Drawing.Size(231, 30);
             this.urunmiktarbox.TabIndex = 21;
-            this.urunmiktarbox.Text = "5";
             this.urunmiktarbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox6

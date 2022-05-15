@@ -15,7 +15,7 @@ namespace NDPProje
         public int sure;
         int malzemeHiz = 6;
         Random rnd = new Random();
-        public int kalanurun = 5;
+        public int kalanurun = Form1.urunMiktari; //form1de girilen ürün miktarı buraya yeni değişkene aktarıldı.
         public int yapilanurun = 0;
         public int tekerpuan;
         public int motorpuan;
@@ -37,7 +37,7 @@ namespace NDPProje
             oyuncuadlbl.Text = Form1.adSoyad;
             urunadlbl.Text = Form1.urunAd; // form1 deki bilgiler form2 deki labellere aktarıldı.
             exitbtn.Visible = false;
-            kalanurunlbl.Text = Form1.urunMiktari;
+            kalanurunlbl.Text = Form1.urunMiktari.ToString();
             kalansurelbl.Text = "120";
             sure = Convert.ToInt32(kalansurelbl.Text);//süre kalan süre labelindeki değerin int değerini aldı.
             //kalan süre çarpı üç skor.
