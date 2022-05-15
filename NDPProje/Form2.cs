@@ -126,7 +126,12 @@ namespace NDPProje
         {
             //malzemelere özgü zaman Ve hızlanma.
             Topla();
+            skor = skorsayac;
             sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;
+            if (kalanurun == 0)
+            {
+                skor += sureskor; // oyun ürünler toplam ürün toplandığında kalan süre puanını, ana puana ekler.
+            }
             scorelbl.Text = ("Skor : " + skor.ToString());
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
@@ -186,7 +191,7 @@ namespace NDPProje
                 benzinpuan--;
                 motorpuan = motorpuan - 2;
                 tekerpuan = tekerpuan - 3;
-                skor = skorsayac; // her ürüne 100 puan eklenince skora yansıtıldı.
+
                 if (kalanurun == 0)
                 {
                     Bitis();
