@@ -46,17 +46,17 @@ namespace NDPProje
             this.gostergebenzin = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.urunadlbl = new System.Windows.Forms.Label();
+            this.oyuncuadlbl = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.oyunPanel = new System.Windows.Forms.Panel();
+            this.exitbtn = new System.Windows.Forms.Button();
             this.oyunbitislbl = new System.Windows.Forms.Label();
             this.giftbox = new System.Windows.Forms.PictureBox();
             this.motorpicbox = new System.Windows.Forms.PictureBox();
             this.tekerlekpicbox = new System.Windows.Forms.PictureBox();
             this.benzinpicbox = new System.Windows.Forms.PictureBox();
-            this.exitbtn = new System.Windows.Forms.Button();
             this.arabapicbox = new System.Windows.Forms.PictureBox();
             this.KalanSure = new System.Windows.Forms.Timer(this.components);
             this.malzemeTimer = new System.Windows.Forms.Timer(this.components);
@@ -89,8 +89,8 @@ namespace NDPProje
             this.gosterge.Controls.Add(this.gostergebenzin);
             this.gosterge.Controls.Add(this.pictureBox2);
             this.gosterge.Controls.Add(this.pictureBox3);
-            this.gosterge.Controls.Add(this.label3);
-            this.gosterge.Controls.Add(this.label2);
+            this.gosterge.Controls.Add(this.urunadlbl);
+            this.gosterge.Controls.Add(this.oyuncuadlbl);
             this.gosterge.Controls.Add(this.pictureBox1);
             this.gosterge.Controls.Add(this.label1);
             this.gosterge.Dock = System.Windows.Forms.DockStyle.Right;
@@ -242,26 +242,26 @@ namespace NDPProje
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // urunadlbl
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(3, 642);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(226, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Ürün Adı";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.urunadlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.urunadlbl.Location = new System.Drawing.Point(3, 642);
+            this.urunadlbl.Name = "urunadlbl";
+            this.urunadlbl.Size = new System.Drawing.Size(226, 25);
+            this.urunadlbl.TabIndex = 2;
+            this.urunadlbl.Text = "Ürün Adı";
+            this.urunadlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label2
+            // oyuncuadlbl
             // 
-            this.label2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(3, 605);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(231, 25);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Ad Soyad";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.oyuncuadlbl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.oyuncuadlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.oyuncuadlbl.Location = new System.Drawing.Point(3, 605);
+            this.oyuncuadlbl.Name = "oyuncuadlbl";
+            this.oyuncuadlbl.Size = new System.Drawing.Size(231, 25);
+            this.oyuncuadlbl.TabIndex = 1;
+            this.oyuncuadlbl.Text = "Ad Soyad";
+            this.oyuncuadlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -299,6 +299,17 @@ namespace NDPProje
             this.oyunPanel.Size = new System.Drawing.Size(789, 720);
             this.oyunPanel.TabIndex = 1;
             this.oyunPanel.Tag = "";
+            // 
+            // exitbtn
+            // 
+            this.exitbtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitbtn.Location = new System.Drawing.Point(314, 399);
+            this.exitbtn.Name = "exitbtn";
+            this.exitbtn.Size = new System.Drawing.Size(102, 55);
+            this.exitbtn.TabIndex = 8;
+            this.exitbtn.Text = "Exıt";
+            this.exitbtn.UseVisualStyleBackColor = true;
+            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
             // 
             // oyunbitislbl
             // 
@@ -353,17 +364,6 @@ namespace NDPProje
             this.benzinpicbox.TabStop = false;
             this.benzinpicbox.Tag = "malzeme";
             // 
-            // exitbtn
-            // 
-            this.exitbtn.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitbtn.Location = new System.Drawing.Point(314, 399);
-            this.exitbtn.Name = "exitbtn";
-            this.exitbtn.Size = new System.Drawing.Size(102, 55);
-            this.exitbtn.TabIndex = 8;
-            this.exitbtn.Text = "Exıt";
-            this.exitbtn.UseVisualStyleBackColor = true;
-            this.exitbtn.Click += new System.EventHandler(this.exitbtn_Click);
-            // 
             // arabapicbox
             // 
             this.arabapicbox.Image = ((System.Drawing.Image)(resources.GetObject("arabapicbox.Image")));
@@ -416,8 +416,8 @@ namespace NDPProje
 
         private System.Windows.Forms.Panel gosterge;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label urunadlbl;
+        private System.Windows.Forms.Label oyuncuadlbl;
         private System.Windows.Forms.Label gostergeteker;
         private System.Windows.Forms.Label gostergemotor;
         private System.Windows.Forms.Label gostergebenzin;

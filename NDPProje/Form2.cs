@@ -4,6 +4,7 @@
 
 using System;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using ProjeLibrary.Somut;
 
@@ -22,6 +23,7 @@ namespace NDPProje
         public int skor = 0;
         public int sureskor;
         public int skorsayac = 0;
+        public StreamWriter file; // Sadece ilk oyuncunun skoru kayıt ediliyor.
         private readonly Oyun _oyun;
         public Form2()
         {
@@ -32,8 +34,8 @@ namespace NDPProje
             motorpicbox.Top = rnd.Next(1, 700) * -1;
             giftbox.Top = rnd.Next(500, 1000) * -1;
             _oyun = new Oyun(oyunPanel);
-            label2.Text = Form1.adSoyad;
-            label3.Text = Form1.urunAd; // form1 deki bilgiler form2 deki labellere aktarıldı.
+            oyuncuadlbl.Text = Form1.adSoyad;
+            urunadlbl.Text = Form1.urunAd; // form1 deki bilgiler form2 deki labellere aktarıldı.
             exitbtn.Visible = false;
             kalanurunlbl.Text = Form1.urunMiktari;
             kalansurelbl.Text = "120";
@@ -52,7 +54,16 @@ namespace NDPProje
         }
         public void Bitis()
         {
-            skor += sureskor;
+            string path = "Best Scores of The Game.txt"; // DOSYANIN ADI!!!
+
+            if (!File.Exists(path))
+            {
+                file = new StreamWriter(path);
+                file.WriteLine(oyuncuadlbl.Text + " : " + skor.ToString()); // sadece ilk oyuncunun skoru kayıt ediliyor.
+                file.Close();
+            }
+            
+            skor += sureskor; // oyun bittiğinse kalan skor 3 ile çarpılıp skora eklenecek.
             KalanSure.Stop();
             malzemeTimer.Stop();
             oyunbitislbl.Text = "Oyun Bitti...";
@@ -97,17 +108,17 @@ namespace NDPProje
             //malzemeler panelin aşağısına düştüğünde tekrardan panel üstünde konumlanacak.
         if (tekerlekpicbox.Top > oyunPanel.Height)
         {
-            tekerlekpicbox.Top = rnd.Next(1, 100) * -1;
-            tekerlekpicbox.Left = rnd.Next(oyunPanel.Width - tekerlekpicbox.Width); 
+            tekerlekpicbox.Top = -50; // nesneler üst üste birleşik gelmemesi için rastgele değerler atanmadı.
+                tekerlekpicbox.Left = rnd.Next(oyunPanel.Width - tekerlekpicbox.Width); 
         }
         else if(benzinpicbox.Top > oyunPanel.Height)
         {
-            benzinpicbox.Top = rnd.Next(1, 130) * -1;
+            benzinpicbox.Top = -200;
             benzinpicbox.Left = rnd.Next(oyunPanel.Width - benzinpicbox.Width);
         }
         else if (motorpicbox.Top > oyunPanel.Height)
         {
-            motorpicbox.Top = rnd.Next(1, 170) * -1;
+            motorpicbox.Top = -120;
             motorpicbox.Left = rnd.Next(oyunPanel.Width - motorpicbox.Width);
         }
         else if(giftbox.Top > oyunPanel.Height)
@@ -116,9 +127,6 @@ namespace NDPProje
                 giftbox.Left = rnd.Next(oyunPanel.Width - giftbox.Width);
             }
             // puanlar stringe dönüştürülerek gösterge panelinde gösterilecek.
-            gostergebenzin.Text = benzinpuan.ToString();
-            gostergemotor.Text = motorpuan.ToString();
-            gostergeteker.Text = tekerpuan.ToString();
         }
 
 
@@ -127,16 +135,29 @@ namespace NDPProje
             //malzemelere özgü zaman Ve hızlanma.
             Topla();
             skor = skorsayac;
-            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3;
+            sureskor = Convert.ToInt32(kalansurelbl.Text) * 3; // süre skorun değeri belirlenir.
             if (kalanurun == 0)
             {
                 skor += sureskor; // oyun ürünler toplam ürün toplandığında kalan süre puanını, ana puana ekler.
             }
             scorelbl.Text = ("Skor : " + skor.ToString());
+            if(kalansurelbl.Text == "100")
+            {
+                malzemeTimer.Interval = 15; //saniye 80e kadar 2 kez hızlanma.
+            }
+            if(kalansurelbl.Text == "80")
+            {
+                malzemeTimer.Interval = 5;
+            }
+            //nesneler aşağıya düşsün diye += operatörü kullanıldı.
             benzinpicbox.Top += malzemeHiz;
             tekerlekpicbox.Top += malzemeHiz;
             motorpicbox.Top += malzemeHiz;
             giftbox.Top += malzemeHiz;
+
+            gostergebenzin.Text = benzinpuan.ToString();
+            gostergemotor.Text = motorpuan.ToString();
+            gostergeteker.Text = tekerpuan.ToString();
 
         }
         public void Topla()
@@ -146,21 +167,21 @@ namespace NDPProje
             {
                 tekerpuan += 1;
                 gostergeteker.Text = tekerpuan.ToString();
-                tekerlekpicbox.Top = rnd.Next(70, 300) * -1;
+                tekerlekpicbox.Top = -50; // nesneler üst üste birleşik gelmemesi için rastgele değerler atanmadı fakat -200 den -100'e ulaşmış bir benzinin üstüne motor spawnlanabilir.
                 tekerlekpicbox.Left = rnd.Next(oyunPanel.Width - tekerlekpicbox.Width);
             }
             else if (benzinpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 benzinpuan += 1;
                 gostergebenzin.Text = benzinpuan.ToString();
-                benzinpicbox.Top = rnd.Next(40, 200) * -1;
+                benzinpicbox.Top = -200;
                 benzinpicbox.Left = rnd.Next(oyunPanel.Width - benzinpicbox.Width);
             }
             else if (motorpicbox.Bounds.IntersectsWith(arabapicbox.Bounds))
             {
                 motorpuan += 1;
                 gostergemotor.Text = motorpuan.ToString();
-                motorpicbox.Top = rnd.Next(20, 350) * -1;
+                motorpicbox.Top = -100;
                 motorpicbox.Left = rnd.Next(oyunPanel.Width - motorpicbox.Width);
             }
             else if (giftbox.Bounds.IntersectsWith(arabapicbox.Bounds))
